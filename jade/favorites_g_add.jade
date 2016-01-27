@@ -1,0 +1,43 @@
+include mixins
+include mixins_2
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave favorites add', false, true, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true, false, true)
+				.page_title_block
+					h2.page_caption Favorites
+					.feed_block
+						ul#favorite_list.filter_list
+							li.filter_item: a.filter_link(href='#fav_tab_1') All 
+							li.filter_item: a.filter_link(href='#fav_tab_2') Artisrs
+							li.filter_item: a.filter_link(href='#fav_tab_3') Albums
+							li.filter_item: a.filter_link(href='#fav_tab_4') Tracks 
+							li.filter_item: a.filter_link(href='#fav_tab_5') Genres & Styles 
+							li.filter_item: a.filter_link(href='#fav_tab_6') Tags
+
+				div.main_content
+					
+					.content_block: .tabBlock(data-tab-context='#favorite_list')
+						#fav_tab_1
+							+fav_all()
+						#fav_tab_2
+							+fav_all()
+						#fav_tab_3
+							+fav_all()
+						#fav_tab_4
+							+fav_all()
+						#fav_tab_5
+							+fav_switcher()
+						#fav_tab_6
+							+fav_all()
+							
+
+			+page_footer()
+		+dev_btns_unreg()
+		+unreg_popups()
+		+popups()
+		+dev_pages()

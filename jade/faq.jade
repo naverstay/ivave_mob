@@ -1,0 +1,37 @@
+include mixins
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave faq', false ,false, true)
+
+	body.account_mod
+		+bottom_player()
+		.wrapper
+			+page_header('FAQ')
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+					
+				div.main_content
+					.faq_list
+						+loop_while(2)
+							.faq_item
+								.faq_question.faqQuestion Is it necessary to have an account <br> here?
+								.faq_answer.faqAnswer 
+									p Hmmm.. If you want to download music from our site and enjoy bonuses and promotions then surely yes. If your are just a passerby or do not love music then may be no need :) Anyway please note that we protect your personal info and never pass it to any third parties, even if they cry asking for them, no way!
+									
+							.faq_item
+								.faq_question.faqQuestion I have difficulties when I logged in - every time I click on any link it kicks me back to main page! What's going on?
+								.faq_answer.faqAnswer 
+									p Hmmm.. If you want to download music from our site and enjoy bonuses and promotions then surely yes. If your are just a passerby or do not love music then may be no need :) Anyway please note that we protect your personal info and never pass it to any third parties, even if they cry asking for them, no way!
+									
+							.faq_item
+								.faq_question.faqQuestion What are the prices on Ivave?
+								.faq_answer.faqAnswer 
+									p Hmmm.. If you want to download music from our site and enjoy bonuses and promotions then surely yes. If your are just a passerby or do not love music then may be no need :) Anyway please note that we protect your personal info and never pass it to any third parties, even if they cry asking for them, no way!
+					
+			+page_footer()
+		+popups()
+		+dev_btns()
+		+dev_pages()
+		

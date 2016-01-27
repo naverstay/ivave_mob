@@ -1,0 +1,265 @@
+/*************** SCROLLBAR BASE CSS ***************/
+
+.scroll-wrapper {
+	overflow : hidden !important;
+	padding  : 0 !important;
+	position : relative;
+}
+
+.mobile_mode .scrollBar {
+	&::-webkit-scrollbar {
+		width  : 4px;
+		height : 12px;
+	}
+	
+	&::-webkit-scrollbar-track {
+		background : #e7e7e7;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		width      : 4px;
+		height     : 12px;
+		background : #c9c9c9;
+	}
+	
+	&::-webkit-scrollbar-corner {
+		background : transparent;
+	}
+}
+
+.scroll-wrapper > .scroll-content {
+	border     : none !important;
+	box-sizing : content-box !important;
+	height     : auto;
+	left       : 0;
+	margin     : 0;
+	max-height : none !important;
+	max-width  : none !important;
+	overflow   : scroll !important;
+	padding    : 0;
+	position   : relative !important;
+	top        : 0;
+	width      : auto !important;
+}
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+	height : 0;
+	width  : 0;
+}
+
+.scroll-element {
+	display : none;
+	
+	.scroll-bar,
+	.scroll-arrow {
+		cursor : default;
+	}
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+	display : block;
+}
+
+.scroll-element, .scroll-element div {
+	box-sizing : content-box;
+}
+
+.scroll-textarea > .scroll-content {
+	overflow : hidden !important;
+}
+
+.scroll-textarea > .scroll-content > textarea {
+	box-sizing : border-box;
+	height     : 99% !important;
+	margin     : 0;
+	max-height : none !important;
+	max-width  : none !important;
+	overflow-y : scroll !important;
+	outline    : none;
+	top        : 0;
+	width      : 100% !important;
+}
+
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+	height : 0;
+	width  : 0;
+}
+
+.scrollbar-outer > .scroll-element.scroll-y {
+	bottom : 1 * $m;
+	right  : 1 * $m;
+	top    : 1 * $m;
+	width  : 4 * $m;
+}
+
+.scrollbar-outer > .scroll-element.scroll-x {
+	height : 4 * $m;
+	left   : 0;
+	width  : 100%;
+	bottom : 0;
+}
+
+.scrollbar-outer > .scroll-element,
+.scrollbar-outer > .scroll-element div {
+	border   : medium none;
+	margin   : 0;
+	padding  : 0;
+	position : absolute;
+	//	z-index  : 1;
+}
+
+.scrollbar-outer > .scroll-element .scroll-element_outer {
+	overflow : hidden;
+}
+
+.scrollbar-outer > .scroll-element.scroll-x .scroll-element_outer {
+	height : 4 * $m;
+	top    : 0;
+}
+
+.scrollbar-outer > .scroll-element.scroll-y .scroll-element_outer {
+	left  : 0;
+	width : 4 * $m;
+}
+
+.scrollbar-outer > .scroll-element div {
+	display : block;
+	height  : 99%;
+	left    : 0;
+	top     : 0;
+	width   : 100%;
+}
+
+.scrollbar-outer > .scroll-element.scroll-y .scroll-bar {
+	min-height : 10 * $m;
+}
+
+/*************** SIMPLE INNER SCROLLBAR ***************/
+
+.scrollbar-inner > .scroll-element,
+.scrollbar-inner > .scroll-element div {
+	border   : none;
+	margin   : 0;
+	padding  : 0;
+	position : absolute;
+	//	z-index  : 1;
+}
+
+.scrollbar-inner > .scroll-element div {
+	display : block;
+	height  : 100%;
+	left    : 0;
+	top     : 0;
+	width   : 100%;
+}
+
+.scrollbar-inner > .scroll-element.scroll-x {
+	bottom : 2 * $m;
+	height : 4 * $m;
+	left   : 0;
+	width  : 100%;
+	cursor : pointer;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y {
+	cursor : pointer;
+	height : 100%;
+	right  : 1 * $m;
+	top    : 0;
+	width  : 9 *$m;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+	//	overflow : hidden;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_outer,
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+	//	-webkit-border-radius : 8 * $m;
+	//	-moz-border-radius    : 8 * $m;
+	//	border-radius         : 8 * $m;
+}
+
+//.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-outer > .scroll-element,
+.scrollbar-inner > .scroll-element {
+	//	-ms-filter : "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	//	filter     : alpha(opacity=40);
+	//	opacity    : 0.4;
+	.scroll-bar {
+		cursor : pointer;
+		@extend %translate3d;
+		@include transition_all(transform .3s);
+	}
+	&.scroll-y {
+		.scroll-bar {
+			&:active,
+			&:hover {
+				//				transform : scale(1.5, 1);
+			}
+		}
+	}
+	&.scroll-x {
+		.scroll-bar {
+			&:active,
+			&:hover {
+				//				transform : scale(1, 1.5);
+			}
+		}
+	}
+}
+
+.scrollbar-outer > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-element_track {
+	background-color : #385762;
+}
+
+.scrollbar-outer > .scroll-element .scroll-bar,
+.scrollbar-inner > .scroll-element .scroll-bar {
+	
+	&:before {
+		content          : '';
+		position         : absolute;
+		top              : 2 * $m;
+		bottom           : 2 * $m;
+		left             : 2 * $m;
+		right            : 2 * $m;
+		@extend %green_btn;
+		background-color : #01d9ae;
+	}
+	
+}
+
+.scrollbar-outer > .scroll-element:hover .scroll-bar,
+.scrollbar-inner > .scroll-element:hover .scroll-bar {
+	//	background-color : #008e72;
+}
+
+.scrollbar-outer > .scroll-element.scroll-draggable .scroll-bar,
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
+	//	background-color : #919191;
+}
+
+/* update scrollbar offset if both scrolls are visible */
+
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+	left : -12 * $m;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+	top : -12 * $m;
+}
+
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+	left : -12 * $m;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+	top : -12 * $m;
+}
+
+.scroll-element.scroll-x {
+	display : none !important;
+}

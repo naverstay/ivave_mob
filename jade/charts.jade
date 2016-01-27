@@ -1,0 +1,38 @@
+-var k=0;
+include mixins
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave charts ', false, true)
+
+	body
+		+bottom_player()
+		.wrapper
+			+page_header('World Charts', true)
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+				.filter_holder: .filterListScroller
+					ul#charts_list.filter_list.blue_mod.fw_600.text_upper.noSwipe
+						li.filter_item: a.filter_link(href='#chart_tab_1'): span.middle_block Albums
+						li.filter_item: a.filter_link(href='#chart_tab_2'): span.middle_block Songs
+
+				div.main_content
+					.tabBlock(data-tab-context='#charts_list')
+						#chart_tab_1
+							ul.charts_albums
+								+loop_while(10)
+									li.chart_album_item: a.chart_album_link(href='#') 
+										.fl: .chart_img.middle_block: img(src='i/flag_usa.png')
+										.fl: .chart_name.middle_block Australia Top 50 Albums
+						#chart_tab_2
+							ul.charts_albums
+								+loop_while(10)
+									li.chart_album_item: a.chart_album_link(href='#') 
+										.fl: .chart_img.middle_block: img(src='i/flag_usa.png')
+										.fl: .chart_name.middle_block Australia Top 50 Albums
+
+				+page_footer()
+			+popups()
+			+dev_btns()
+			+dev_pages()

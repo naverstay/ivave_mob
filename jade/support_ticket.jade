@@ -1,0 +1,35 @@
+include mixins
+	include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave Support ticket', false, false, false, true)
+	body
+		+support_comment()
+		.wrapper
+			+page_header('Support ticket')
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+				.main_content.support_mod
+					ul.support_ticket_list.answer_mod
+						li.support_ticket_item
+							.support_ticket_date 21.04.2015   09:45pm
+							.support_treatment
+								p.fw_600 Can't download album
+								p It doesn't work at all. I downloaded music but can't play it
+					.support_caption Comments
+					ul.support_ticket_list.closed_tickets.answer_mod
+						li.support_ticket_item
+						.support_ticket_date 21.04.2015   09:45pm
+						.support_treatment
+							p.fw_600
+								span.middle_block: span.support_ticket_link.icon-speach_cloud.color_blue
+								| Support
+							p Was it FLAC or Mp3 format? For FLAC you should try another player.
+						li.support_ticket_item
+						.support_ticket_date 21.04.2015   09:45pm
+						.support_treatment
+							p.fw_600
+								span.middle_block: span.support_ticket_link.icon-speach_cloud.color_gray_light
+								| You
+							p Which one would you recommend?

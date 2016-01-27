@@ -1,0 +1,424 @@
+.support_ticket {
+	@extend %box_shadow;
+	padding-left : 18 *$m;
+}
+
+.charts_title {
+	@extend %clearfix;
+	margin-bottom : 12 *$m;
+	
+	.table_collapse_btn {
+		margin-left : 10*$m;
+	}
+}
+
+.ticket_item {
+	position   : relative;
+	margin     : 0 1 *$m 0 0;
+	padding    : 15*$m 20*$m 15*$m 0;
+	border-top : 1*$m solid #e4e4e4;
+	
+	p {
+		margin : 5*$m 0;
+	}
+	
+	&:first-child {
+		border-top : none;
+	}
+	
+	&.nest_1 {
+		margin-left : 30 *$m;
+	}
+	
+	&:before {
+		position     : absolute;
+		right        : 100%;
+		margin-right : 4*$m;
+		top          : 9 *$m;
+		color        : #5d5d5d;
+		font-size    : 24*$m;
+	}
+}
+
+.charts_block {
+	float : left;
+	width : 300*$m;
+	
+	+ .charts_albums {
+		margin-left : 320*$m;
+	}
+}
+
+.charts_wrapper {
+	@extend %box_shadow;
+	line-height   : 48 *$m;
+	margin-bottom : 15 *$m;
+	border-bottom : 1px solid #ddd;
+}
+
+.charts_holder {
+	@extend %clearfix;
+	border-bottom : 1px solid #ddd;
+	
+	.fl {
+		width        : 50%;
+		padding-left : 16 *$m;
+	}
+}
+
+.charts_list {
+	
+	.switch_link {
+		color : #385762;
+	}
+}
+
+.charts_item {
+	border-top : 1px solid #ddd;
+}
+
+.charts_icon {
+	width        : 16 *$m;
+	margin-right : 7 *$m;
+	
+	img {
+		display : block;
+		width   : 100%;
+	}
+}
+
+.chart_l_caption {
+	color           : #000;
+	text-decoration : none;
+	font            : 15 *$m $RobotoMedium;
+}
+
+.charts_albums {
+}
+
+.alphabet_filter_holder {
+	@extend %box_shadow;
+	padding       : 10*$m 20*$m;
+	margin-bottom : 20*$m;
+}
+
+.alphabet_table {
+	width        : 100%;
+	table-layout : fixed;
+	text-align   : center;
+}
+
+.alphabet_link {
+	display         : block;
+	text-transform  : uppercase;
+	width           : 26*$m;
+	height          : 26*$m;
+	line-height     : 26*$m;
+	border-radius   : 100%;
+	background      : #fff;
+	color           : #0a8;
+	text-decoration : none;
+	@include transition_all(background .3s, color .3s);
+	
+	.active & {
+		background : #0a8;
+		color      : #fff;
+		cursor     : default;
+	}
+	
+}
+
+.filter_container {
+	@extend %clearfix;
+	margin-left : -20*$m;
+	
+	&.filter_3_mod {
+		margin-right : -1%;
+	}
+}
+
+.genre_filter_block {
+	@extend %box_shadow;
+	padding       : 18*$m 14 *$m;
+	margin-bottom : 8*$m;
+	color         : #385762;
+	
+	.auth_label {
+		color : #a4a4a4;
+	}
+	
+}
+
+.genre_filter_list {
+	float        : left;
+	padding-left : 20 *$m;
+	
+	.filter_3_mod & {
+		width : 33%;
+	}
+	
+	.filter_2_mod & {
+		width : 50%;
+	}
+}
+
+.genre_filter_item {
+	margin-top : 13 *$m;
+}
+
+.filter_block_caption {
+	
+	.table_collapse_btn {
+		font-size : 10 *$m;
+	}
+}
+
+.search_context {
+	display        : inline-block;
+	vertical-align : middle;
+	position       : relative;
+	background     : #1c94cc;
+	border-radius  : 15 *$m;
+	padding        : 2*$m 9*$m;
+	margin         : 0 5 *$m;
+	line-height    : 28 *$m;
+	color          : #fff;
+}
+
+.search_context_clear {
+	position        : relative;
+	display         : inline-block;
+	vertical-align  : middle;
+	border-radius   : 100%;
+	width           : 16*$m;
+	height          : 16*$m;
+	line-height     : 16*$m;
+	margin          : 3*$m 0 0 7 *$m;
+	color           : #fff;
+	text-decoration : none;
+	
+	&:before {
+		position    : absolute;
+		top         : 0;
+		bottom      : 0;
+		left        : 0;
+		right       : 0;
+		font-size   : 10 *$m;
+		line-height : 21 *$m;
+		font-weight : 800;
+		text-align  : center;
+	}
+	
+}
+
+.top_star {
+	position   : absolute;
+	right      : 0;
+	bottom     : 0;
+	left       : 0;
+	height     : 28*$m;
+	padding    : 4 * $m 10 *$m 0 31 *$m;
+	color      : #ff5fc1;
+	background : #f4f5f6;
+	
+	&:before {
+		position   : absolute;
+		top        : 50%;
+		left       : 5*$m;
+		margin-top : -8*$m;
+		font-size  : 20 *$m;
+	}
+	
+}
+
+.support_controls {
+	@extend %clearfix;
+	padding : 16 *$m;
+}
+
+.support_ticket_link {
+	display         : block;
+	position        : relative;
+	font-size       : 16 *$m;
+	margin-right    : 10 *$m;
+	color           : $gl_blue;
+	text-decoration : none;
+}
+
+.support_caption {
+	text-transform : uppercase;
+	padding        : 0 16*$m 12*$m;
+}
+
+.support_ticket_list {
+	background   : #fff;
+	padding-left : 16 *$m;
+	box-shadow   : 0 1 *$m 1*$m rgba(0, 0, 0, .25);
+	
+	&.answer_mod {
+		margin-bottom : 16 *$m;
+	}
+}
+
+.support_ticket_item {
+	overflow      : hidden;
+	padding-right : 16 *$m;
+	border-top    : 1px solid #ddd;
+	
+	&:first-child {
+		border-top : none;
+	}
+}
+
+.support_ticket_date {
+	margin    : 20*$m 0;
+	font-size : 12 *$m;
+	color     : #757575;
+}
+
+.support_treatment {
+	padding-bottom : 1px;
+	font-size      : 16*$m;
+	
+	p {
+		margin-bottom : 15*$m;
+	}
+}
+
+.support_ticket_caption {
+	@extend %clearfix;
+	line-height : 60 *$m;
+	
+	a {
+		text-decoration : none;
+	}
+}
+
+.playlist_control_row {
+	@extend %clearfix;
+	margin      : -1.14286em 0 -0.71429em 0;
+	line-height : 60 *$m;
+	
+	.fl {
+		max-width : 85%;
+	}
+	
+	.track_controls_holder {
+		@include transition_all(width .3s, transform .3s);
+		width       : 3em;
+		position    : relative;
+		white-space : nowrap;
+		text-align  : right;
+	}
+	
+	&.open_controls {
+		.track_controls_holder {
+			width : 18em;
+		}
+		
+		.track_controls {
+			@include transform_translate(0, 0);
+			margin-right : 0;
+		}
+		
+	}
+	
+	.track_controls {
+		margin-left : 0 !important;
+	}
+	
+}
+
+.playlist_row {
+	display     : none;
+	padding-top : 15 *$m;
+}
+
+.support_comment_holder {
+	position   : fixed;
+	bottom     : 0;
+	right      : 0;
+	left       : 0;
+	z-index    : 1;
+	background : #fff;
+	box-shadow : 0 -1px 2px rgba(0, 0, 0, .25);
+}
+
+.support_comment_btn {
+	position   : absolute;
+	bottom     : 0;
+	right      : 0;
+	top        : 0;
+	width      : 45 *$m;
+	text-align : center;
+	background : none;
+	
+	&:before {
+		position    : absolute;
+		top         : 0;
+		bottom      : 0;
+		left        : 0;
+		right       : 0;
+		font-size   : 28 *$m;
+		line-height : 1.8;
+		color       : #a7e3ff;
+	}
+}
+
+.history_caption {
+	color     : #000;
+	padding   : 0 6 *$m 15*$m;
+	font-size : 16 *$m;
+}
+
+.album_index {
+	position    : absolute;
+	bottom      : 0;
+	left        : 0;
+	font        : 12*$m $RobotoMedium;
+	min-width   : 32*$m;
+	padding     : 1 *$m 3 *$m;
+	color       : #fff;
+	line-height : 1.8;
+	text-align  : center;
+	background  : rgba(0, 0, 0, .2);
+}
+
+.how_download_block {
+	position   : relative;
+	padding    : 0 52 * $m;
+	text-align : center;
+}
+
+.download_close_btn {
+	position        : absolute;
+	bottom          : 0;
+	right           : 0;
+	top             : 0;
+	width           : 52 *$m;
+	color           : #fff;
+	text-decoration : none;
+	line-height     : 20 *$m;
+	
+	&:before {
+		position : absolute;
+		@extend %hor_vert_centr;
+	}
+}
+
+.how_download_link {
+	color           : #fff;
+	text-decoration : none;
+}
+
+.how_download_tip {
+	display       : block;
+	border-radius : 100%;
+	border        : 1px solid #fff;
+	width         : 20 *$m;
+	height        : 20 *$m;
+	line-height   : 20 *$m;
+	margin-right  : 10*$m;
+	text-align    : center;
+	color         : #fff;
+}

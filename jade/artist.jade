@@ -1,0 +1,109 @@
+include mixins
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave артист ', true)
+	body
+		+bottom_player()
+		.wrapper
+			+page_header('Alejandro')
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+				.main_content
+					.artist_block
+						.album_cover
+							.album_cover_likes
+								ul.soc_likes
+									li.soc_like_item: a.soc_like_btn.icon-soc_fb(href='#')
+									li.soc_like_item: a.soc_like_btn.icon-soc_tw(href='#')
+									li.soc_like_item: a.soc_like_btn.icon-soc_vk(href='#')
+									li.soc_like_item: a.soc_like_btn.icon-soc_gl(href='#')
+							img(src='i/big_cover.jpg')
+						.album_info
+							.aside_caption_holder
+								.fr.mod_1: a.favorite_author.icon-heart_filled(href='#')
+								.fl: .aside_caption.fw_600 Lady Gaga 
+							.brief_block
+								.fl: .middle_block
+									p Born: 28 March 1986
+								.fr: .middle_block
+									a.btn_v4.artist_brief_btn(href='#') Read Brief Bio
+							.album_download_block
+								dl.album_info_list.clearfix
+									dt: .middle_block Genres: 
+									dd.tags_v1
+										a.default_link(href='#') Electronic, 
+										a.default_link(href='#') Pop/Rock 
+										a.default_link(href='#') R&B
+									| <br>
+									dt: .middle_block Styles:
+									dd.tags_v1
+										a.default_link(href='#') AM Pop, 
+										a.default_link(href='#') Club/Dance, 
+										a.default_link(href='#') Dance, 
+										a.default_link(href='#') Dance-Pop, 
+										a.default_link(href='#') Hip-Hop/Urban 
+										a.default_link(href='#') R&B/Soul
+										
+					.filter_block
+						.filter_list_scroller.filterListScroller.noSwipe
+							ul#filter_list.filter_list.fw_600.text_upper
+								li.filter_item: a.filter_link(href='#filter_tab_1'): span.middle_block
+									| All 
+									span.filter_counter  (68)
+								li.filter_item: a.filter_link(href='#filter_tab_2'): span.middle_block
+									| Albums 
+									span.filter_counter  (68)
+								li.filter_item: a.filter_link(href='#filter_tab_3'): span.middle_block
+									| Singles 
+									span.filter_counter  (68)
+								li.filter_item: a.filter_link(href='#filter_tab_4'): span.middle_block
+									| Compilations 
+									span.filter_counter  (68)
+								li.filter_item: a.filter_link(href='#filter_tab_5'): span.middle_block
+									| Concerts 
+									span.filter_counter  (68)
+								li.filter_item: a.filter_link(href='#filter_tab_6'): span.middle_block
+									| Bootlegs 
+									span.filter_counter  (68)
+								li.filter_item: a.filter_link(href='#filter_tab_7'): span.middle_block
+									| Non Albums Tracks 
+									span.filter_counter  (68)
+
+					.tabBlock(data-tab-context='#filter_list')
+						#filter_tab_1
+							+discography_graph(1)
+							+discography()
+						#filter_tab_2
+							+discography_graph(2)
+							+discography()
+						#filter_tab_3
+							+discography_graph(3)
+							+discography()
+						#filter_tab_4
+							+discography_graph(4)
+							+discography()
+						#filter_tab_5
+							+discography_graph(5)
+							+discography()
+						#filter_tab_6
+							+discography_graph(6)
+							+discography()
+						#filter_tab_7
+							+discography_graph(7)
+							+discography()
+										
+					div.album_wrapper
+						.album_title.mob_only Best 10 tracks
+						+album_table()
+						.album_list_controls.clearfix
+							.fl: .middle_block: .download_block
+								a.download_price.icon-download(href='#') Selected $0.40
+							.fr: .middle_block
+								span.download_size.fz_16 32.67 Mb
+							
+				+page_footer()
+			+popups()
+			+dev_btns()
+			+dev_pages()

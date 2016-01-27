@@ -1,0 +1,34 @@
+-var k=0;
+include mixins
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave charts ')
+
+	body.how_download_mod
+		+how_download_block()
+		.wrapper
+			+page_header('World Charts')
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+
+				div.main_content
+					.content_block.compilation_mod
+						ul.search_result_list
+							while k < 9
+								-k++;
+								li.search_result_item: .result_item_inner.text_center
+									a.related_album_cover(href='#')
+										img(src='i/aside_album_1.jpg')
+										.related_price.fw_600 $ 1.20
+										.top_100_pos: span=k
+									.search_result_info
+										p.one_line_mod: a.default_link(href='#') A State Of Trance A State Of Trance
+										p.color_gray.one_line_mod Armin Van Buuren
+										p.color_gray 2015
+
+				+page_footer()
+			+popups()
+			+dev_btns()
+			+dev_pages()

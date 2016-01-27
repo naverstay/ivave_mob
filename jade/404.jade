@@ -1,0 +1,24 @@
+include mixins
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave 404')
+
+	body
+		.wrapper.page_404
+			+page_header()
+			.abs_holder: .table
+				.table_cell.text_center
+					.msg_404
+						.msg_404_img: img(src='i/guy_404.png')
+						.msg_404_caption
+							span.fz_66 404 
+							span.fz_44 Oh! 
+						.msg_404_text.fz_29 Looks like this page doesn’t exist
+						p.fz_29 Try one of following pages:
+						ul.menu_404.fw_600
+							li.menu_404_item: a.link_404.fz_29(href='index.html') Main page
+							li.menu_404_item: a.link_404.fz_29(href='#') World Charts
+							li.menu_404_item: a.link_404.fz_29(href='#') Just added
+									
+		+dev_pages()

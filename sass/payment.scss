@@ -1,0 +1,123 @@
+.payment_form {
+	background : #3f51b5;
+	margin     : 0 -30 *$m 60 *$m;
+	padding    : 0 30*$m;
+}
+
+.payment_form_caption {
+	margin-bottom : 25 *$m;
+	line-height   : 46 *$m;
+	
+	.middle_block {
+		margin-right : 10 *$m;
+	}
+	
+}
+
+.payment_settings {
+	color   : #fff;
+	float   : left;
+	padding : 0 17 *$m;
+	width   : 47%;
+}
+
+.payment_card_settings {
+	float         : right;
+	width         : 53%;
+	padding-right : 25*$m;
+}
+
+.payment_switch_block {
+	@extend %box_shadow;
+	position      : relative;
+	border-radius : 2*$m;
+}
+
+.payment_btn_holder {
+	margin : 50*$m 0 (-35 *$m);
+}
+
+.payment_card_block {
+	@extend %clearfix;
+	margin-bottom : 20 *$m;
+	position      : relative;
+}
+
+.payment_card {
+	@extend %box_shadow;
+	width         : 352 *$m;
+	height        : 210 *$m;
+	padding       : 15*$m 20 *$m;
+	border-radius : 3 *$m;
+	
+	&.payment_card_front {
+		z-index       : 1;
+		position      : relative;
+		margin-bottom : 18*$m;
+		background    : #fff url(../i/visa_mc.png) no-repeat 233 *$m 165 *$m;
+		
+		.f_row {
+			margin-bottom : 14 *$m;
+		}
+		
+		label {
+			font-family    : $RobotoMedium;
+			text-transform : uppercase;
+			color          : #343434;
+		}
+		
+	}
+	
+	&.payment_card_back {
+		position    : absolute;
+		left        : 120 *$m;
+		bottom      : 0;
+		background  : #feffee;
+		padding-top : 75*$m;
+		
+		&:before {
+			content    : '';
+			position   : absolute;
+			top        : 17*$m;
+			left       : 0;
+			right      : 0;
+			height     : 43*$m;
+			background : #2a2a2a;
+		}
+		
+		.fr {
+			max-width : 90 *$m;
+		}
+	}
+	
+}
+
+.card_info {
+	clear      : both;
+	color      : #cfcfcf;
+	font-size  : 6 *$m;
+	text-align : justify;
+}
+
+.cvv_val {
+	max-width     : 35 *$m;
+	margin-bottom : 10*$m;
+}
+
+.card_exp_date {
+	@extend %clearfix;
+	
+	.fl:first-child {
+		margin-right : 18*$m;
+	}
+}
+
+.soundtrack_filter {
+	color       : #a4a4a4;
+	white-space : nowrap;
+	margin-left : 30*$m;
+	
+	.chosen_v1 {
+		min-width : 100*$m;
+	}
+}

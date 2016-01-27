@@ -1,0 +1,176 @@
+- var artist=false;
+include mixins
+include mixins_2
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave History')
+	body
+		+bottom_player()
+		.wrapper
+			+page_header('History', false, false, false, false, false, false, false, false, true)
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+				div.main_content
+					.content_block.compilation_mod
+						.history_caption April, 2015
+						.album_info_block.mod_alone
+							.album_details
+								.fr.playlist_btn_gray
+									.middle_block: a.icon-download.playlist_btn.blue_icon_btn(href='#')
+									.middle_block: a.playlist_btn.icon-heart_filled(href='#')
+								.fl
+									.middle_block: .album_img: img(src='i/related_album.jpg')
+									.middle_block.album_information
+										p The Pursuite
+										p.color_gray.fz_12 Jamie Cullum
+										p.color_gray.fz_12 2015, 256 Mb, FLAC
+										p.color_gray.fz_12 April, 24
+
+						.album_info_block
+							.album_details
+								.fr.playlist_btn_gray
+									//.middle_block: .album_price $1.30
+									.middle_block: a.icon-download.playlist_btn.blue_icon_btn(href='#')
+									.middle_block: a.playlist_btn.icon-heart_filled(href='#')
+								.fl
+									.middle_block: .album_img: img(src='i/related_album.jpg')
+									.middle_block.album_information
+										p The Pursuite
+										p.color_gray.fz_12 Jamie Cullum
+										p.color_gray.fz_12 2015, 256 Mb, FLAC
+										p.color_gray.fz_12 April, 24
+										
+						div.album_wrapper
+							div.album_table
+								+loop_while(3)
+									.album_row
+										//td.col_1 1
+										.fl.col_2: .middle_block
+											label.check_emul.check_emul_v2
+												input.hidden_check.toPlayListCheck(type='checkbox')
+												span.check_text
+										.fl.col_3.player_btn_gray: .middle_block
+											a.player_btn.icon-player_play(href='#')
+										.fl.col_4: .middle_block.track_name
+											p Virgin Mary (Intro)
+												span.fav_track.icon-heart_filled
+											-if (artist)
+												a.default_link(href='#') Mr Mister
+										.fr.col_5
+											.middle_block.track_info
+												.track_info_toggle.trackInfoToggle ...
+												span.track_format_info 2014, 256 Mb, FLAC
+											.middle_block.playlist_btn_gray.track_controls
+												-if (artist)
+													a.icon-user.playlist_btn(href='#')
+												a.icon-database_add.playlist_btn.plBtn(href='#')
+												a.icon-download.playlist_btn(href='#')
+												a.playlist_btn.icon-heart_filled(href='#')
+									.album_row
+										//td.col_1 10
+										.fl.col_2: .middle_block
+											label.check_emul.check_emul_v2
+												input.hidden_check.toPlayListCheck(type='checkbox')
+												span.check_text
+										.fl.col_3.player_btn_gray: .middle_block
+											a.player_btn.icon-player_play(href='#')
+										.fl.col_4: .middle_block.track_name
+											p Virgin Mary (Intro)
+											-if (artist)
+												a.default_link(href='#') Mr Mister
+										.fr.col_5
+											.middle_block.track_info
+												.track_info_toggle.trackInfoToggle ...
+												span.track_format_info 2014, 256 Mb, FLAC
+											.middle_block.playlist_btn_gray.track_controls
+												-if (artist)
+													a.icon-user.playlist_btn(href='#')
+												a.icon-database_add.playlist_btn.plBtn(href='#')
+												a.icon-download.playlist_btn(href='#')
+												a.playlist_btn.icon-heart_filled.active(href='#')
+									.album_row
+										//td.col_1 13
+										.fl.col_2: .middle_block
+											label.check_emul.check_emul_v2
+												input.hidden_check.toPlayListCheck(type='checkbox')
+												span.check_text
+										.fl.col_3.player_btn_gray: .middle_block
+											a.player_btn.icon-player_play(href='#')
+										.fl.col_4: .middle_block.track_name
+											p Virgin Mary (Intro)
+											-if (artist)
+												a.default_link(href='#') Mr Mister
+										.fr.col_5
+											.middle_block.track_info
+												.track_info_toggle.trackInfoToggle ...
+												span.track_format_info 2014, 256 Mb, FLAC
+											.middle_block.playlist_btn_gray.track_controls
+												-if (artist)
+													a.icon-user.playlist_btn(href='#')
+												a.icon-database_add.playlist_btn.plBtn(href='#')
+												a.icon-download.playlist_btn(href='#')
+												a.playlist_btn.icon-heart_filled(href='#')
+
+						.album_info_block.mod_alone
+							.album_details
+								.fr.playlist_btn_gray
+									.middle_block: a.icon-download.playlist_btn.blue_icon_btn(href='#')
+									.middle_block: a.playlist_btn.icon-heart_filled(href='#')
+								.fl
+									.middle_block.player_btn_gray
+										a.player_btn.icon-player_play(href='#')
+									.middle_block.album_information
+										p The Pursuite
+										p.color_gray.fz_12 Jamie Cullum
+										p.color_gray.fz_12 2015, 256 Mb, FLAC
+										p.color_gray.fz_12 April, 24
+										
+						.history_caption March, 2015
+							
+						.album_info_block.mod_alone
+							.album_details
+								.fr.playlist_btn_gray
+									.middle_block: a.icon-download.playlist_btn.blue_icon_btn(href='#')
+									.middle_block: a.playlist_btn.icon-heart_filled(href='#')
+								.fl
+									.middle_block: .album_img: img(src='i/related_album.jpg')
+									.middle_block.album_information
+										p The Pursuite
+										p.color_gray.fz_12 Jamie Cullum
+										p.color_gray.fz_12 2015, 256 Mb, FLAC
+										p.color_gray.fz_12 April, 24
+										
+						.album_info_block.mod_alone
+							.album_details
+								.fr.playlist_btn_gray
+									.middle_block: a.icon-download.playlist_btn.blue_icon_btn(href='#')
+									.middle_block: a.playlist_btn.icon-heart_filled(href='#')
+								.fl
+									.middle_block.player_btn_gray
+										a.player_btn.icon-player_play(href='#')
+									.middle_block.album_information
+										p The Pursuite
+										p.color_gray.fz_12 Jamie Cullum
+										p.color_gray.fz_12 2015, 256 Mb, FLAC
+										p.color_gray.fz_12 April, 24	
+						
+						.album_info_block.mod_alone
+							.album_details
+								.fr.playlist_btn_gray
+									.middle_block: a.icon-download.playlist_btn.blue_icon_btn(href='#')
+									.middle_block: a.playlist_btn.icon-heart_filled(href='#')
+								.fl
+									.middle_block: .album_img: img(src='i/related_album.jpg')
+									.middle_block.album_information
+										p The Pursuite
+										p.color_gray.fz_12 Jamie Cullum
+										p.color_gray.fz_12 2015, 256 Mb, FLAC
+										p.color_gray.fz_12 April, 24
+										
+
+
+				+page_footer()
+			+popups()
+			+dev_btns()
+			+dev_pages()

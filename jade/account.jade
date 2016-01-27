@@ -1,0 +1,71 @@
+include mixins
+include mixins_2
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave account')
+	
+	body.menu_open_.account_mod
+		+bottom_player()
+		div.wrapper
+			+page_header('Account')
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+
+				div.main_content: .content_block.account_mod
+					form(action='#')
+						.account_form
+							.f_row.mod_5
+								.account_label Email:
+								.account_input a.peterson@gmail.com
+							.f_row.mod_5
+								.fr
+									a.btn_v4.acc_refill_btn(href='#') Refill
+								.fl
+									.account_label Balance: 
+									.account_input $14.90
+							.f_row.mod_5
+								.account_label Personal bonus:
+								.account_input 0%
+							.f_row.mod_4
+								.account_label: label() Birthday. We need it as we love making presens:
+								.account_input_container
+									.fl.chosen_v1.no_search
+										- var n = 1
+										select.chosen-select(data-scrollbar="true")
+											while n < 32
+												option= n++
+									.fl.chosen_v1.no_search
+										- n = 1
+										select.chosen-select(data-scrollbar="true")
+											while n < 12
+												option Feb
+												-n++;
+									.fl.chosen_v1.no_search
+										- n = 1920
+										select.chosen-select(data-scrollbar="true")
+											while n < 2010
+												option= n++
+												
+							.f_row.mod_5
+								.account_label: label(for='cur_pass') Current password:
+								.account_input: input#cur_pass.f_input.f_input_v2(placeholder='Your current password')
+							.f_row.mod_5
+								.account_label: label(for='new_pass') New password:
+								.account_input: input#new_pass.f_input.f_input_v2(placeholder='What password so you want')
+							.f_row.mod_5
+								.fr
+									span.check_emul.check_emul_v2.dark_mod
+										input#update_subscribe.hidden_check.shiftCheck(type='checkbox')
+										span.check_text
+								.fl
+									.account_label: .middle_block Newsletter:
+									.account_input: label(for='update_subscribe') Send me updates
+									
+							.f_row.mod_4
+								.fl: .middle_block
+									button.btn_v8.account_save_btn.fw_600: span Save
+
+				+page_footer()
+			+dev_pages()

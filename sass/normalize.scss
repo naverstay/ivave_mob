@@ -1,0 +1,536 @@
+/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, input, label, textarea, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	-webkit-box-sizing          : border-box;
+	-moz-box-sizing             : border-box;
+	box-sizing                  : border-box;
+	margin                      : 0;
+	padding                     : 0;
+	vertical-align              : baseline;
+	font-size                   : 100%;
+	border                      : 0;
+	outline                     : 0;
+	//background                  : transparent;
+	-webkit-tap-highlight-color : rgba(0, 0, 0, 0);
+	
+	&:before, &:after {
+		-webkit-box-sizing : border-box;
+		-moz-box-sizing    : border-box;
+		box-sizing         : border-box;
+	}
+}
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin     : 0;
+	padding    : 0;
+	font-size  : 100%;
+	border     : 0;
+	outline    : 0;
+	background : transparent;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display : block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+
+audio, canvas, video {
+	display  : inline-block;
+	*display : inline;
+	*zoom    : 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+
+audio:not([controls]) {
+	display : none;
+	height  : 0;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+
+[hidden] {
+	display : none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html {
+	font-size                : 10px; /* 1 */
+	-webkit-text-size-adjust : 10px; /* 2 */
+	-ms-text-size-adjust     : 10px; /* 2 */
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+
+html, button, input, select, textarea {
+	font-family : sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+
+a:focus {
+	//	outline : thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+
+a:hover, a:active {
+	outline : 0;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+
+//h1 {
+//	margin    : .67em 0;
+//	font-size : 2em;
+//}
+//
+//h2 {
+//	margin    : .83em 0;
+//	font-size : 1.5em;
+//}
+//
+//h3 {
+//	margin    : 1em 0;
+//	font-size : 1.17em;
+//}
+//
+//h4 {
+//	margin    : 1.33em 0;
+//	font-size : 1em;
+//}
+//
+//h5 {
+//	margin    : 1.67em 0;
+//	font-size : .83em;
+//}
+//
+//h6 {
+//	margin    : 2.33em 0;
+//	font-size : .75em;
+//}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+
+abbr[title] {
+	border-bottom : 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+
+b, strong {
+	font-weight : bold;
+}
+
+blockquote {
+	margin : 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+
+dfn {
+	font-style : italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+
+mark {
+	color      : #000;
+	background : #ff0;
+}
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+
+p, pre {
+	//	margin : 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+
+pre, code, kbd, samp {
+	font-family  : monospace, serif;
+	font-size    : 1em;
+	_font-family : 'courier new', monospace;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+
+pre {
+	white-space : pre;
+	white-space : pre-wrap;
+	word-wrap   : break-word;
+}
+
+small {
+	font-size : 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+
+sub, sup {
+	position       : relative;
+	vertical-align : baseline;
+	font-size      : 75%;
+	line-height    : 0;
+}
+
+sup {
+	top : -.5em;
+}
+
+sub {
+	bottom : -.25em;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img {
+	-ms-interpolation-mode : bicubic; /* 2 */
+	border                 : 0; /* 1 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+
+svg:not(:root) {
+	overflow : hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+
+figure {
+	margin : 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+
+form {
+	margin : 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+
+fieldset {
+	margin  : 0 2px;
+	padding : .35em .625em .75em;
+	border  : 1px solid #c0c0c0;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+
+legend {
+	padding      : 0;
+	white-space  : normal; /* 2 */
+	border       : 0; /* 1 */
+	*margin-left : -7px; /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+
+button, input, select, textarea {
+	margin          : 0; /* 2 */
+	vertical-align  : baseline; /* 3 */
+	font-size       : 100%; /* 1 */
+	*vertical-align : middle; /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+
+button, input {
+	line-height : normal; /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+
+button, input[type='button'], input[type='reset'], input[type='submit'] {
+	cursor             : pointer; /* 1 */
+	-webkit-appearance : button; /* 2 */
+	*overflow          : visible; /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled], input[disabled] {
+	cursor : default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+
+input[type='checkbox'], input[type='radio'] {
+	box-sizing : border-box; /* 1 */
+	padding    : 0; /* 2 */
+	*height    : 13px; /* 3 */
+	*width     : 13px; /* 3 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+
+input[type='search'] {
+	-webkit-box-sizing : content-box; /* 2 */
+	-moz-box-sizing    : content-box;
+	box-sizing         : content-box;
+	-webkit-appearance : textfield; /* 1 */
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+
+input[type='search']::-webkit-search-decoration, input[type='search']::-webkit-search-cancel-button {
+	-webkit-appearance : none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	padding : 0;
+	border  : 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+
+textarea {
+	overflow       : auto; /* 1 */
+	vertical-align : top; /* 2 */
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+/*
+ * Remove most spacing between table cells
+ */
+
+table {
+	border-spacing  : 0;
+	border-collapse : collapse;
+}
+
+ol, ul {
+	list-style : none;
+}
+
+blockquote, q {
+	quotes : none;
+}
+
+blockquote {
+	&:before, &:after {
+		content : '';
+		content : none;
+	}
+}
+
+q {
+	&:before, &:after {
+		content : '';
+		content : none;
+	}
+}
+
+:focus {
+	outline : 0;
+}
+
+textarea {
+	resize : none;
+}
+
+ins {
+	text-decoration : none;
+}
+
+del {
+	text-decoration : line-through;
+}
+
+input, select {
+	vertical-align : middle;
+}
+
+textarea {
+	overflow-y : auto;
+	resize     : none;
+}
+
+input[type='radio'] {
+	vertical-align : text-bottom;
+}
+
+input[type='checkbox'] {
+	vertical-align : bottom;
+}
+
+input, textarea {
+	margin     : 0;
+	padding    : 0;
+	border     : 0;
+	background : none;
+}
+
+input:hover, input:focus, input:active, textarea:hover, textarea:focus, textarea:active {
+	outline : none;
+}
+
+input[type='submit'] {
+	cursor : pointer;
+}
+
+button {
+	margin  : 0;
+	padding : 0;
+	cursor  : pointer;
+	border  : none;
+}
+
+button:focus, button:active {
+	outline : none;
+}
+
+input, textarea {
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing    : border-box;
+	box-sizing         : border-box;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color : $placeholder_color;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color : $placeholder_color;
+}
+
+input:not(:empty):focus::-webkit-input-placeholder,
+textarea:not(:empty):focus::-webkit-input-placeholder {
+	color : rgba(0, 0, 0, 0) !important;
+}
+
+input:not(:empty):focus::-moz-placeholder,
+textarea:not(:empty):focus::-moz-placeholder {
+	color : rgba(0, 0, 0, 0) !important;
+}

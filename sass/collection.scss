@@ -1,0 +1,205 @@
+.artist_link {
+	text-decoration : none;
+	color           : #868686;
+	@include transition_all(color .3s);
+	
+	&:hover {
+		color : lighten(#868686, 15%);
+	}
+}
+
+.aside_spacer {
+	float        : left;
+	width        : 23.5%;
+	margin-right : 2%;
+	min-height   : 1 *$m;
+}
+
+.filter_wrapper {
+	float      : left;
+	width      : 74.5%;
+	min-height : 1 *$m;
+	
+	> .fl:first-child {
+		padding-left : 10 *$m;
+	}
+}
+
+.feed_block {
+	position      : relative;
+	padding-right : 80*$m;
+}
+
+.fav_toggle_btn {
+	position        : absolute;
+	z-index         : 1;
+	width           : 60*$m;
+	height          : 60*$m;
+	line-height     : 60*$m;
+	margin-bottom   : -30*$m;
+	border-radius   : 100%;
+	right           : 0;
+	top             : -65 *$m;
+	text-decoration : none;
+	text-align      : center;
+	
+	&.management_mod {
+		top : -32 *$m;
+	}
+	
+	&.fav_toggle_add {
+		@extend %box_shadow;
+		@extend %blue_btn;
+	}
+	
+	&.fav_toggle_rm {
+		@extend %red_btn;
+		@include transform_rotate(45);
+	}
+	
+	&:before {
+		content        : '+';
+		display        : inline-block;
+		vertical-align : middle;
+		font           : 45*$m $RobotoThin;
+	}
+	
+}
+
+.filter_holder {
+	background : $gl_blue;
+	padding    : 0 16*$m;
+	position   : relative;
+	overflow   : hidden;
+	
+	&.button_mod {
+		padding-right : 45 *$m;
+	}
+	
+}
+
+.filter_list_scroller {
+	position   : relative;
+	overflow   : hidden;
+	background : #e6e6e6;
+	box-shadow : inset 0 -1px 2px #c3c4c5;
+}
+
+.filter_list {
+	@extend %clearfix;
+	line-height : 48 *$m;
+	
+	&.blue_mod {
+		
+		.filter_link {
+			color : rgba(255, 255, 255, .4);
+		}
+		
+		.ui-state-active .filter_link {
+			color               : #fff;
+			border-bottom-color : #fff;
+		}
+	}
+}
+
+.filter_item {
+	float : left;
+}
+
+.filter_link {
+	position        : relative;
+	display         : block;
+	font-family     : $RobotoMedium;
+	padding         : 5*$m 15 *$m 0;
+	line-height     : 38 *$m;
+	border-bottom   : 5 *$m solid transparent;
+	text-decoration : none;
+	color           : #000;
+	letter-spacing  : .02em;
+	@include transition_all(border-color .3s, color .3s);
+	
+	.middle_block {
+		font-size : 12 *$m;
+	}
+	
+	&:hover {
+		border-bottom-color : #23b9ff;
+	}
+	
+	.ui-state-active & {
+		cursor              : default;
+		border-bottom-color : #23b9ff;
+	}
+}
+
+.filter_counter {
+	color : #818181;
+}
+
+.best_tracks_list {
+	margin-right : -10 *$m;
+}
+
+.best_tracks_item {
+	@extend %clearfix;
+	line-height : 35 *$m;
+	border-top  : 1*$m solid #f1f2f4;
+	
+	.fl {
+		width       : 75%;
+		white-space : nowrap;
+		
+		.middle_block {
+			overflow      : hidden;
+			max-width     : 80%;
+			text-overflow : ellipsis;
+		}
+	}
+	
+	.fr {
+		max-width : 25%;
+	}
+	
+	&:first-child {
+		border-top : none;
+	}
+	
+	.player_btn,
+	.playlist_btn {
+		&:before {
+			font-size : 20 *$m !important;
+		}
+	}
+}
+
+.toddler_holder {
+	overflow : hidden;
+	position : relative;
+	padding  : 14*$m 16*$m 0;
+}
+
+.search_result_counter {
+	margin-bottom : 10 *$m;
+	text-align    : center;
+	font-size     : 12 *$m;
+	color         : #000;
+}
+
+.graph_block {
+	height : 70 *$m;
+}
+
+.brief_block {
+	@extend %clearfix;
+	line-height : 40 *$m;
+	padding     : 16*$m 0;
+	
+	.tablet.portrait &,
+	.mobile & {
+		padding : 16*$m;
+	}
+}
+
+
+
+

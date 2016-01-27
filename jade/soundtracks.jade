@@ -1,0 +1,27 @@
+include mixins
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave Soundtracks ', false, false, false, false, false, false, false, true)
+
+	body
+		+bottom_player()
+		.wrapper
+			+page_header('Soundtracks', false, true, true)
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+				.filter_sort.chosen_v3.no_search
+					- var n = 0
+					select.chosen-select(data-scrollbar="true")
+						while n < 3
+							-n++;
+							option Sort by Popularity #{n}
+				.main_content
+					div.album_wrapper
+						+album_table()
+
+				+page_footer()
+			+popups()
+			+dev_btns()
+			+dev_pages()

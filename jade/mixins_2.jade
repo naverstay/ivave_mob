@@ -1,0 +1,1145 @@
+mixin news_list ()
+	ul.news_list_switcher
+		li.news_list_sw_item
+			.chart_switch_block.hoverHolder
+				.switch_btn.hoverControl
+					span Albums
+				.switch_list_holder.hoverBlock: .scrollBar(data-max_screen_height = '30%', data-scroller-class='scrollbar-inner scroller_holder h_380')
+					+news_switch_list()
+		li.news_list_sw_item
+			.chart_switch_block.hoverHolder
+				.switch_btn.hoverControl
+					span Mp3
+				.switch_list_holder.hoverBlock: .scrollBar(data-max_screen_height = '30%', data-scroller-class='scrollbar-inner scroller_holder h_380')
+					+news_switch_list()
+		li.news_list_sw_item
+			.chart_switch_block.hoverHolder
+				.switch_btn.hoverControl
+					span Pop music
+				.switch_list_holder.hoverBlock: .scrollBar(data-max_screen_height = '30%', data-scroller-class='scrollbar-inner scroller_holder h_380')
+					+news_switch_list()
+		li.news_list_sw_item
+			.chart_switch_block.hoverHolder
+				.switch_btn.hoverControl
+					span All artists
+				.switch_list_holder.hoverBlock: .scrollBar(data-max_screen_height = '30%', data-scroller-class='scrollbar-inner scroller_holder h_380')
+					+news_switch_list()
+
+	.showMoreHolder
+		div.album_wrapper
+			.album_info_holder
+				.album_caption_holder
+					.fl
+						.middle_block.fz_18
+							| New album of 
+							a.default_link(href='#') Madonna 
+						.middle_block.fz_18: a.default_link.icon-download.album_download_link(href='#') $ 1.30
+					.fr 26.03.2015
+
+				.album_description
+					.fr
+						ul.soc_share_list
+							li.soc_share_item: a.soc_share_link.icon-soc_gl_2(href='#')
+							li.soc_share_item: a.soc_share_link.icon-soc_tw_2(href='#')
+							li.soc_share_item: a.soc_share_link.icon-soc_fb_3(href='#')
+							li.soc_share_item: a.soc_share_link.icon-soc_vk_3(href='#')
+
+					.fl: a.album_info_cover(href='#'): img(src='i/aside_album_1.jpg')
+
+					.fl
+						.aside_caption_holder
+							.fl: .aside_caption MDNA World Tour
+							.fl: a.favorite_author.icon-heart(href='#')
+						dl.album_info_list
+							dt Released: 
+							dd 2013 <br>
+							dt Size: 
+							dd 128 Mb<br>
+							dt Bitrate: 
+							dd MP3 320 kbit<br>
+							dt Release ty
+							dd pe: Concert<br>
+							dt Genres: 
+							dd
+								a.default_link(href='#') Electronic, 
+								a.default_link(href='#') Pop/Rock
+
+			table.album_table.shiftBlock(data-last-checked='-1')
+				tr
+					th.col_1 #
+					th.col_2 &nbsp;
+					th.col_3 &nbsp;
+					th.col_4 Track name
+					th.col_5 Bitrate
+					th.col_6 Length
+					th.col_7 &nbsp;
+				+loop_while(2)
+					tr.shiftUnit
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+					tr.shiftUnit
+						td.col_1 10
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+				+loop_while(5)
+					tr.shiftUnit.showMoreBlock
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+					tr.shiftUnit.showMoreBlock
+						td.col_1 10
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+
+			.album_info_controls.showMoreHide
+				a.default_link.showMoreBtn(href='#') Show more
+
+		.album_list_controls.showMoreBlock
+			.middle_block: .download_block
+				a.download_price.icon-download(href='#') Download selected
+			.middle_block
+				span.fz_18 Total price: $1.30   
+				span.download_size 148.00 Mb
+
+	.showMoreHolder
+		div.album_wrapper
+			.album_info_holder
+				.album_caption_holder
+					.fl
+						.middle_block.fz_18
+							| 4 new tracks of 
+							a.default_link(href='#') Madonna 
+						.middle_block.fz_18: a.default_link.icon-download.album_download_link(href='#') $ 1.30
+					.fr 26.03.2015
+
+			table.album_table.shiftBlock(data-last-checked='-1')
+				tr
+					th.col_1 #
+					th.col_2 &nbsp;
+					th.col_3 &nbsp;
+					th.col_4 Track name
+					th.col_5 Bitrate
+					th.col_6 Length
+					th.col_7 &nbsp;
+				+loop_while(2)
+					tr.shiftUnit
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+					tr.shiftUnit
+						td.col_1 10
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+				+loop_while(7)
+					tr.shiftUnit.showMoreBlock
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+					tr.shiftUnit.showMoreBlock
+						td.col_1 10
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+
+			.album_info_controls.showMoreHide
+				a.default_link.showMoreBtn(href='#') Show more
+
+		.album_list_controls.showMoreBlock
+			.middle_block: .download_block
+				a.download_price.icon-download(href='#') Download selected
+			.middle_block
+				span.fz_18 Total price: $1.30   
+				span.download_size 148.00 Mb
+
+	.showMoreHolder
+		div.album_wrapper
+			.album_info_holder
+				.album_caption_holder
+					.fl
+						.middle_block.fz_18
+							| 4 new tracks from favorite 
+							a.default_link(href='#') Genres&Styles  
+
+					.fr 26.03.2015
+
+			table.album_table.shiftBlock(data-last-checked='-1')
+				tr
+					th.col_1 #
+					th.col_2 &nbsp;
+					th.col_3 &nbsp;
+					th.col_4 Track name
+					th.col_5 Bitrate
+					th.col_6 Length
+					th.col_7 &nbsp;
+				+loop_while(2)
+					tr.shiftUnit
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+					tr.shiftUnit
+						td.col_1 10
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+
+				+loop_while(2)
+					tr.shiftUnit.showMoreBlock
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+					tr.shiftUnit.showMoreBlock
+						td.col_1 10
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+
+			.album_info_controls.showMoreHide
+				a.default_link.showMoreBtn(href='#') Show more
+
+		.album_list_controls.showMoreBlock
+			.middle_block: .download_block
+				a.download_price.icon-download(href='#') Download selected
+			.middle_block
+				span.fz_18 Total price: $1.30   
+				span.download_size 148.00 Mb		
+
+	.showMoreHolder
+		div.album_wrapper
+			.album_info_holder
+				.album_caption_holder
+					.fl
+						.middle_block.fz_18
+							| 4 new tracks from favorite 
+							a.default_link(href='#') Genres&Styles  
+					.fr 26.03.2015
+
+			table.album_table.fav_mod.shiftBlock(data-last-checked='-1')
+				tr.collapse_row_main.collapseRowMain.shiftUnit(data-collapse=1)
+					td.col_pre_1
+						// to prevent shift checking bug
+						input.hidden_check.shiftCheck.hide(type='checkbox')
+						a.btn_v7.table_collapse_btn.tableCollapseBtn(href='#')
+					td.col_4(colspan=5)
+						.middle_block
+							a.fav_album_cover(href='#')
+						.middle_block
+							p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+							p
+								a.default_link(href='#') Various Artists, Fr33m4n, Altivar,  
+								span.text_gray 2000
+					td.col_6.text_right 112 Mb
+					td.col_7.playlist_btn_green
+						a.icon-heart.playlist_btn.favBtn(href='#')
+						a.icon-download.playlist_btn(href='#')
+				+loop_while(10)
+					tr.collapseRowSlave.shiftUnit(data-collapse=1)
+						td.col_pre_1
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6.text_right 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+				tr.collapseRowSlave.shiftUnit(data-collapse=1)
+					td.col_pre_1
+						// to prevent shift checking bug
+						input.hidden_check.shiftCheck.hide(type='checkbox')
+					td(colspan=7): .album_list_controls.favorite_mod
+						.middle_block: .download_block
+							a.download_price.icon-download(href='#') Download selected
+						.middle_block
+							span.fz_18 Total price: $1.30   
+							span.download_size 148.00 Mb
+
+				tr.collapse_row_main.collapseRowMain.shiftUnit(data-collapse=2)
+					td.col_pre_1
+						// to prevent shift checking bug
+						input.hidden_check.shiftCheck.hide(type='checkbox')
+						a.btn_v7.table_collapse_btn.tableCollapseBtn(href='#')
+					td.col_4(colspan=5)
+						.middle_block
+							a.fav_album_cover(href='#')
+						.middle_block
+							p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+							p
+								a.default_link(href='#') Various Artists, Fr33m4n, Altivar,  
+								span.text_gray 2000
+					td.col_6.text_right 112 Mb
+					td.col_7.playlist_btn_green
+						a.icon-heart.playlist_btn.favBtn(href='#')
+						a.icon-download.playlist_btn(href='#')
+				+loop_while(10)
+					tr.collapseRowSlave.shiftUnit(data-collapse=2)
+						td.col_pre_1
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6.text_right 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+				tr.collapseRowSlave.shiftUnit(data-collapse=2)
+					td.col_pre_1
+						// to prevent shift checking bug
+						input.hidden_check.shiftCheck.hide(type='checkbox')
+					td(colspan=7): .album_list_controls.favorite_mod
+						.middle_block: .download_block
+							a.download_price.icon-download(href='#') Download selected
+						.middle_block
+							span.fz_18 Total price: $1.30   
+							span.download_size 148.00 Mb
+
+				tr.collapse_row_main.collapseRowMain.shiftUnit.showMoreBlock(data-collapse=3)
+					td.col_pre_1
+						// to prevent shift checking bug
+						input.hidden_check.shiftCheck.hide(type='checkbox')
+						a.btn_v7.table_collapse_btn.tableCollapseBtn(href='#')
+					td.col_4(colspan=5)
+						.middle_block
+							a.fav_album_cover(href='#')
+						.middle_block
+							p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+							p
+								a.default_link(href='#') Various Artists, Fr33m4n, Altivar,  
+								span.text_gray 2000
+					td.col_6.text_right 112 Mb
+					td.col_7.playlist_btn_green
+						a.icon-heart.playlist_btn.favBtn(href='#')
+						a.icon-download.playlist_btn(href='#')
+				+loop_while(10)
+					tr.collapseRowSlave.shiftUnit(data-collapse=3)
+						td.col_pre_1
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6.text_right 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+				tr.collapseRowSlave.shiftUnit(data-collapse=3)
+					td.col_pre_1
+						// to prevent shift checking bug
+						input.hidden_check.shiftCheck.hide(type='checkbox')
+					td(colspan=7): .album_list_controls.favorite_mod
+						.middle_block: .download_block
+							a.download_price.icon-download(href='#') Download selected
+						.middle_block
+							span.fz_18 Total price: $1.30   
+							span.download_size 148.00 Mb
+				tr.collapse_row_main.collapseRowMain.shiftUnit.showMoreBlock(data-collapse=4)
+					td.col_pre_1
+						// to prevent shift checking bug
+						input.hidden_check.shiftCheck.hide(type='checkbox')
+						a.btn_v7.table_collapse_btn.tableCollapseBtn(href='#')
+					td.col_4(colspan=5)
+						.middle_block
+							a.fav_album_cover(href='#')
+						.middle_block
+							p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+							p
+								a.default_link(href='#') Various Artists, Fr33m4n, Altivar,  
+								span.text_gray 2000
+					td.col_6.text_right 112 Mb
+					td.col_7.playlist_btn_green
+						a.icon-heart.playlist_btn.favBtn(href='#')
+						a.icon-download.playlist_btn(href='#')
+				+loop_while(10)
+					tr.collapseRowSlave.shiftUnit(data-collapse=4)
+						td.col_pre_1
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6.text_right 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+
+				tr.collapseRowSlave.shiftUnit(data-collapse=4)
+					td.col_pre_1
+						// to prevent shift checking bug
+						input.hidden_check.shiftCheck.hide(type='checkbox')
+					td(colspan=7): .album_list_controls.favorite_mod
+						.middle_block: .download_block
+							a.download_price.icon-download(href='#') Download selected
+						.middle_block
+							span.fz_18 Total price: $1.30   
+							span.download_size 148.00 Mb
+
+			.album_info_controls.showMoreHide
+				a.default_link.showMoreBtn(href='#') Show more
+
+	.showMoreHolder
+		div.album_wrapper
+			.album_info_holder
+				.album_caption_holder
+					.fl
+						.middle_block.fz_18
+							| New in 
+							a.default_link(href='#') Charts  
+						.middle_block: .switch_link
+							.switch_icon: img(src='i/flag_usa.png')
+							span Australia Top 50 Tracks
+					.fr 26.03.2015
+
+			table.album_table.shiftBlock(data-last-checked='-1')
+				tr
+					th.col_1 #
+					th.col_2 &nbsp;
+					th.col_3 &nbsp;
+					th.col_4 Track name
+					th.col_5 Bitrate
+					th.col_6 Length
+					th.col_7 &nbsp;
+				+loop_while(2)
+					tr.shiftUnit
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+					tr.shiftUnit
+						td.col_1 10
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+				+loop_while(12)
+					tr.shiftUnit.showMoreBlock
+						td.col_1 1
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+					tr.shiftUnit.showMoreBlock
+						td.col_1 10
+						td.col_2
+							span.check_emul.check_emul_v2
+								input.hidden_check.shiftCheck(type='checkbox')
+								span.check_text
+						td.col_3.player_btn_blue
+							a.player_btn.icon-player_play.player_btn_shadow(href='#')
+						td.col_4 Virgin Mary (Intro)
+						td.col_5 320 kbit
+						td.col_6 5:46
+						td.col_7.playlist_btn_green
+							a.icon-database_add.playlist_btn.plBtn(href='#')
+							a.icon-heart.playlist_btn.favBtn(href='#')
+							a.icon-download.playlist_btn(href='#')
+
+			.album_info_controls.showMoreHide
+				a.default_link.showMoreBtn(href='#') Show more
+
+		.album_list_controls.showMoreBlock
+			.middle_block: .download_block
+				a.download_price.icon-download(href='#') Download selected
+			.middle_block
+				span.fz_18 Total price: $1.30   
+				span.download_size 148.00 Mb
+
+mixin history_list()
+	div.album_wrapper
+		table.album_table.fav_mod.shiftBlock(data-last-checked='-1')
+			tr.collapse_row_main.collapseRowMain.shiftUnit(data-collapse=1)
+				td.col_pre_1
+					// to prevent shift checking bug
+					input.hidden_check.shiftCheck.hide(type='checkbox')
+					a.btn_v7.table_collapse_btn.tableCollapseBtn(href='#')
+				td.col_4(colspan=4)
+					.middle_block
+						a.fav_album_cover(href='#')
+					.middle_block
+						p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+						p
+							a.default_link(href='#') Various Artists, Fr33m4n, Altivar,  
+							span.text_gray 2000
+				td.col_5.text_right 112 Mb
+				td.col_6.text_right 05 April 2015
+				td.col_7.playlist_btn_green
+					a.icon-heart.playlist_btn.favBtn(href='#')
+					a.playlist_btn.icon-download_cloud(href='#')
+			+loop_while(4)
+				tr.collapseRowSlave.shiftUnit(data-collapse=1)
+					td.col_pre_1
+					td.col_1 1
+					td.col_2
+						span.check_emul.check_emul_v2
+							input.hidden_check.shiftCheck(type='checkbox')
+							span.check_text
+					td.col_3.player_btn_blue
+						a.player_btn.icon-player_play.player_btn_shadow(href='#')
+					td.col_4 Virgin Mary (Intro)
+					td.col_5 320 kbit
+					td.col_6.text_right 5:46
+					td.col_7.playlist_btn_green
+						a.icon-heart.playlist_btn.favBtn(href='#')
+						a.playlist_btn.icon-download_cloud(href='#')
+			tr.collapseRowSlave.shiftUnit(data-collapse=1)
+				td.col_pre_1
+					// to prevent shift checking bug
+					input.hidden_check.shiftCheck.hide(type='checkbox')
+				td(colspan=7): .album_list_controls.history_mod
+					.middle_block
+						a.btn_v1.fw_b.download_btn(href='#') Download
+					.middle_block
+						span Total size: 
+						span.download_size 29.15 Mb  
+
+			tr.collapse_row_main.collapseRowMain.shiftUnit(data-collapse=2)
+				td.col_pre_1
+					// to prevent shift checking bug
+					input.hidden_check.shiftCheck.hide(type='checkbox')
+					a.btn_v7.table_collapse_btn.tableCollapseBtn(href='#')
+				td.col_4(colspan=4)
+					.middle_block
+						a.fav_album_cover(href='#')
+					.middle_block
+						p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+						p
+							a.default_link(href='#') Various Artists, Fr33m4n, Altivar,  
+							span.text_gray 2000
+				td.col_5.text_right 112 Mb
+				td.col_6.text_right 05 April 2015
+				td.col_7.playlist_btn_green
+					a.icon-heart.playlist_btn.favBtn(href='#')
+					a.playlist_btn.icon-download_cloud(href='#')
+			+loop_while(6)
+				tr.collapseRowSlave.shiftUnit(data-collapse=2)
+					td.col_pre_1
+					td.col_1 1
+					td.col_2
+						span.check_emul.check_emul_v2
+							input.hidden_check.shiftCheck(type='checkbox')
+							span.check_text
+					td.col_3.player_btn_blue
+						a.player_btn.icon-player_play.player_btn_shadow(href='#')
+					td.col_4 Virgin Mary (Intro)
+					td.col_5 320 kbit
+					td.col_6.text_right 5:46
+					td.col_7.playlist_btn_green
+						a.icon-heart.playlist_btn.favBtn(href='#')
+						a.playlist_btn.icon-download_cloud(href='#')
+			tr.collapseRowSlave.shiftUnit(data-collapse=2)
+				td.col_pre_1
+					// to prevent shift checking bug
+					input.hidden_check.shiftCheck.hide(type='checkbox')
+				td(colspan=7): .album_list_controls.history_mod
+					.middle_block
+						a.btn_v1.fw_b.download_btn(href='#') Download 
+					.middle_block
+						span Total size: 
+						span.download_size 29.15 Mb  
+
+			tr.collapse_row_main.collapseRowMain.shiftUnit(data-collapse=2)
+				td.col_pre_1
+					// to prevent shift checking bug
+					input.hidden_check.shiftCheck.hide(type='checkbox')
+					a.btn_v7.table_collapse_btn.tableCollapseBtn(href='#')
+				td.col_4(colspan=4)
+					.middle_block
+						a.fav_album_cover(href='#')
+					.middle_block
+						p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+						p
+							a.default_link(href='#') Various Artists, Fr33m4n, Altivar,  
+							span.text_gray 2000
+				td.col_5.text_right 112 Mb
+				td.col_6.text_right 05 April 2015
+				td.col_7.playlist_btn_green
+					a.icon-heart.playlist_btn.favBtn(href='#')
+					a.playlist_btn.icon-download_cloud(href='#')
+			+loop_while(6)
+				tr.collapseRowSlave.shiftUnit(data-collapse=2)
+					td.col_pre_1
+					td.col_1 1
+					td.col_2
+						span.check_emul.check_emul_v2
+							input.hidden_check.shiftCheck(type='checkbox')
+							span.check_text
+					td.col_3.player_btn_blue
+						a.player_btn.icon-player_play.player_btn_shadow(href='#')
+					td.col_4 Virgin Mary (Intro)
+					td.col_5 320 kbit
+					td.col_6.text_right 5:46
+					td.col_7.playlist_btn_green
+						a.icon-heart.playlist_btn.favBtn(href='#')
+						a.playlist_btn.icon-download_cloud(href='#')
+			tr.collapseRowSlave.shiftUnit(data-collapse=2)
+				td.col_pre_1
+					// to prevent shift checking bug
+					input.hidden_check.shiftCheck.hide(type='checkbox')
+				td(colspan=7): .album_list_controls.history_mod
+					.middle_block
+						a.btn_v1.fw_b.download_btn(href='#') Download 
+					.middle_block
+						span Total size: 
+						span.download_size 29.15 Mb  
+
+mixin fav_styles(add)
+	.fav_styles_tab
+		a.fav_toggle_btn.favToggleBtn(href='#', class = add ? 'fav_toggle_add' : 'fav_toggle_rm')
+		.fav_switcher_holder.favSwitcherHolder(style = add ? 'display:none' : '')
+			.fav_switcher_col.favCol_1
+				.fav_switcher_caption Genres
+				.fav_switcher_block.chosen_v3_multi
+					select.chosen-select-multi(multiple, data-scrollbar="false")
+						option(value='Avant-Garde') Avant-Garde
+						option(value='Blues') Blues
+						option(value='Classical Music') Classical Music
+						option(value='Country') Country
+						option(value='Easy Listening') Easy Listening
+						option(value='Electronic') Electronic
+						option(value='Folk') Folk
+						option(value='International') International
+						option(value='Jazz') Jazz
+						option(value='Latin') Latin
+						option(value='New Age') New Age
+						option(value='Pop/Rock') Pop/Rock
+						option(value='R&B') R&B
+						option(value='Rap') Rap
+						option(value='Reggae') Reggae
+						option(value='Stage & Screen') Stage & Screen
+						option(value='Vocal') Vocal
+	
+			.fav_switcher_col.favCol_2
+				.fav_switcher_caption Subgenres
+				.fav_switcher_block.chosen_v3_multi
+					select.chosen-select-multi(multiple, data-scrollbar="false")
+						option(value='Jazz') Jazz
+						option(value='Latin') Latin
+						option(value='New Age') New Age
+						option(value='Pop/Rock') Pop/Rock
+						option(value='R&B') R&B
+						option(value='Rap') Rap
+						option(value='Reggae') Reggae
+						option(value='Stage & Screen') Stage & Screen
+						option(value='Vocal') Vocal
+	
+			.fav_switcher_col.favCol_3
+				.fav_switcher_caption Styles
+				.fav_switcher_block.chosen_v3_multi.chosen_v3_multi_half
+					select.chosen-select-multi(multiple, data-scrollbar="false")
+						option(value='Avant-Garde') Avant-Garde
+						option(value='Adult Contemporary') Adult Contemporary
+						option(value='AM Pop') AM Pop
+						option(value='Club/Dance') Club/Dance
+						option(value='Contemporary Pop/Rock') Contemporary Pop/Rock
+						option(value='Dance') Dance
+						option(value='Dance-Pop') Dance-Pop
+						option(value='Pop') Pop
+						option(value='Pop/Rock') Pop/Rock
+						option(value='Soft Rock') Soft Rock
+						option(value='Adult Contemporary') Adult Contemporary
+						option(value='AM Pop') AM Pop
+						option(value='Club/Dance') Club/Dance
+						option(value='Contemporary Pop/Rock') Contemporary Pop/Rock
+						option(value='Dance') Dance
+						option(value='Dance-Pop') Dance-Pop
+						option(value='Pop') Pop
+						option(value='Pop/Rock') Pop/Rock
+			.cb
+		
+		.fav_holder.playlist_btn_green.player_btn_green.favHolder
+			+loop_while(3)
+				.fav_col
+					.search_result_unit
+						.fl
+							a.search_r_cover(href='#')
+								+svg_jazz
+							.search_result_text
+								p: a.default_link(href='#') Best Of Dubstep 2012
+								p
+									a.default_link(href='#') Ofra Haza,  
+									span.text_gray 2000
+						.fr
+							.text_center: a.playlist_btn.icon-heart.active(href='#')
+							.text_center: a.playlist_btn.icon-download_cloud(href='#')
+					.search_result_unit
+						.fl
+							.search_result_text
+								p: a.default_link(href='#') Best Of Dubstep 2012
+						.fr
+							.text_center: a.playlist_btn.icon-heart.active(href='#')
+					.search_result_unit
+						.fl
+							a.search_r_cover(href='#')
+								+svg_jazz
+							.search_result_text
+								p: a.default_link(href='#') Best Of Dubstep 2012
+								p
+									a.default_link(href='#') Ofra Haza,  
+									span.text_gray 2000
+						.fr
+							.text_center: a.playlist_btn.icon-heart.active(href='#')
+							.text_center: a.playlist_btn.icon-download_cloud(href='#')
+					.search_result_unit
+						.fl
+							.search_result_text
+								p: a.default_link(href='#') Best Of Dubstep 2012
+						.fr
+							.text_center: a.playlist_btn.icon-heart.active(href='#')
+
+mixin fav_all(add)
+	.fav_holder.playlist_btn_green.player_btn_green
+		- if (add)
+			a.fav_toggle_btn(href= add ? 'favorites_g_add.html' : 'favorites.html', class = add ? 'fav_toggle_add' : 'fav_toggle_rm')
+		.fav_col
+			.search_result_unit
+				.fl
+					a.search_r_cover(href='#')
+					.search_result_text
+						p: a.default_link(href='#') Best Of Dubstep 2012
+						p
+							a.default_link(href='#') Ofra Haza,  
+							span.text_gray 2000
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+
+			.search_result_unit
+				.fl
+					.search_r_cover: button.player_btn.icon-player_play
+					.search_result_text
+						| Rave Music 2014 - 30 Top 
+						em Best Of Hits Hard Acid 
+						| Dubstep Rave Music, 
+						| Electro Goa Hard Dance 
+						| Psytrance
+				.fr
+					.text_center: a.playlist_btn.icon-heart(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+			.search_result_unit
+				.fl
+					a.search_r_cover(href='#')
+					.search_result_text
+						p: a.default_link(href='#') Best Of Dubstep 2012
+						p
+							a.default_link(href='#') Ofra Haza,  
+							span.text_gray 2000
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+			.search_result_unit
+				.fl
+					.fav_label.icon-tag_label
+					.search_result_text
+						p: a.default_link(href='#') king of pop
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					
+			.search_result_unit
+				.fl
+					a.search_r_cover(href='#')
+					.search_result_text
+						p: a.default_link(href='#') Best Of Dubstep 2012
+						p
+							a.default_link(href='#') Ofra Haza,  
+							span.text_gray 2000
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+
+			.search_result_unit
+				.fl
+					.fav_label.icon-tag_label
+					.search_result_text
+						p: a.default_link(href='#') king of pop
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					
+			.search_result_unit
+				.fl
+					a.search_r_cover(href='#')
+					.search_result_text
+						em Best
+						|  Actress
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+
+		.fav_col
+			.search_result_unit
+				.fl
+					a.search_r_cover(href='#')
+					.search_result_text
+						p: a.default_link(href='#') Best Of Dubstep 2012
+						p
+							a.default_link(href='#') Ofra Haza,  
+							span.text_gray 2000
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+
+			.search_result_unit
+				.fl
+					.search_r_cover: button.player_btn.icon-player_play
+					.search_result_text
+						em Best
+						|  Actress
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+
+			.search_result_unit
+				.fl
+					a.search_r_cover(href='#')
+					.search_result_text
+						p: a.default_link(href='#') Best Of Dubstep 2012
+						p
+							a.default_link(href='#') Ofra Haza,  
+							span.text_gray 2000
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					
+			.search_result_unit
+				.fl
+					.search_r_cover: button.player_btn.icon-player_play
+					.search_result_text
+						| Rave Music 2014 - 30 Top 
+						em Best Of Hits Hard Acid 
+						| Dubstep Rave Music, 
+						| Electro Goa Hard Dance 
+						| Psytrance
+				.fr
+					.text_center: a.playlist_btn.icon-heart(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+			.search_result_unit
+				.fl
+					a.search_r_cover(href='#')
+					.search_result_text
+						p: a.default_link(href='#') Best Of Dubstep 2012
+						p
+							a.default_link(href='#') Ofra Haza,  
+							span.text_gray 2000
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+			.search_result_unit
+				.fl
+					.fav_label.icon-tag_label
+					.search_result_text
+						p: a.default_link(href='#') king of pop
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					
+			.search_result_unit
+				.fl
+					.search_r_cover: button.player_btn.icon-player_play
+					.search_result_text
+						em Best
+						|  Actress
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+					
+		.fav_col
+			.search_result_unit
+				.fl
+					.search_r_cover: button.player_btn.icon-player_play
+					.search_result_text
+						em Best
+						| Actress
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+			.search_result_unit
+				.fl
+					.search_r_cover: button.player_btn.icon-player_play
+					.search_result_text
+						| Rave Music 2014 - 30 Top 
+						em Best Of Hits Hard Acid 
+						| Dubstep Rave Music, 
+						| Electro Goa Hard Dance 
+						| Psytrance
+				.fr
+					.text_center: a.playlist_btn.icon-heart(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+
+			.search_result_unit
+				.fl
+					a.search_r_cover(href='#')
+					.search_result_text
+						p: a.default_link(href='#') Best Of Dubstep 2012
+						p
+							a.default_link(href='#') Ofra Haza,  
+							span.text_gray 2000
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+
+			.search_result_unit
+				.fl
+					.fav_label.icon-tag_label
+					.search_result_text
+						p: a.default_link(href='#') king of pop
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					
+			.search_result_unit
+				.fl
+					.fav_label.icon-tag_label
+					.search_result_text
+						p: a.default_link(href='#') king of pop
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					
+			.search_result_unit
+				.fl
+					a.search_r_cover(href='#')
+						+svg_jazz
+					.search_result_text
+						p: a.default_link(href='#') Best Of Dubstep 2012
+						p
+							a.default_link(href='#') Ofra Haza,  
+							span.text_gray 2000
+				.fr
+					.text_center: a.playlist_btn.icon-heart.active(href='#')
+					.text_center: a.playlist_btn.icon-download_cloud(href='#')
+
+	.fav_controls
+		a.btn_v4.section_more_btn(href='#') View more
+
+mixin fav_switcher(add)
+	.fav_switcher_holder.favSwitcherHolder
+		a.fav_toggle_btn(href= add ? 'favorites_g_add.html' : 'favorites.html', class = add ? 'fav_toggle_add' : 'fav_toggle_rm')
+		.fav_switcher_col.favCol_1
+			.fav_switcher_caption Genres
+			.fav_switcher_block.chosen_v3_multi
+				select.chosen-select-multi(multiple, data-scrollbar="false")
+					option(value='Avant-Garde') Avant-Garde
+					option(value='Blues') Blues
+					option(value='Classical Music') Classical Music
+					option(value='Country') Country
+					option(value='Easy Listening') Easy Listening
+					option(value='Electronic') Electronic
+					option(value='Folk') Folk
+					option(value='International') International
+					option(value='Jazz') Jazz
+					option(value='Latin') Latin
+					option(value='New Age') New Age
+					option(value='Pop/Rock') Pop/Rock
+					option(value='R&B') R&B
+					option(value='Rap') Rap
+					option(value='Reggae') Reggae
+					option(value='Stage & Screen') Stage & Screen
+					option(value='Vocal') Vocal
+
+		.fav_switcher_col.favCol_2
+			.fav_switcher_caption Subgenres
+			.fav_switcher_block.chosen_v3_multi
+				select.chosen-select-multi(multiple, data-scrollbar="false")
+					option(value='Jazz') Jazz
+					option(value='Latin') Latin
+					option(value='New Age') New Age
+					option(value='Pop/Rock') Pop/Rock
+					option(value='R&B') R&B
+					option(value='Rap') Rap
+					option(value='Reggae') Reggae
+					option(value='Stage & Screen') Stage & Screen
+					option(value='Vocal') Vocal
+
+		.fav_switcher_col.favCol_3
+			.fav_switcher_caption Styles
+			.fav_switcher_block.chosen_v3_multi.chosen_v3_multi_half
+				select.chosen-select-multi(multiple, data-scrollbar="false")
+					option(value='Avant-Garde') Avant-Garde
+					option(value='Adult Contemporary') Adult Contemporary
+					option(value='AM Pop') AM Pop
+					option(value='Club/Dance') Club/Dance
+					option(value='Contemporary Pop/Rock') Contemporary Pop/Rock
+					option(value='Dance') Dance
+					option(value='Dance-Pop') Dance-Pop
+					option(value='Pop') Pop
+					option(value='Pop/Rock') Pop/Rock
+					option(value='Soft Rock') Soft Rock
+					option(value='Adult Contemporary') Adult Contemporary
+					option(value='AM Pop') AM Pop
+					option(value='Club/Dance') Club/Dance
+					option(value='Contemporary Pop/Rock') Contemporary Pop/Rock
+					option(value='Dance') Dance
+					option(value='Dance-Pop') Dance-Pop
+					option(value='Pop') Pop
+					option(value='Pop/Rock') Pop/Rock
+		.cb

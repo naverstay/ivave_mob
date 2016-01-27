@@ -1,0 +1,170 @@
+.fav_styles_tab {
+	position : relative;
+}
+
+.fav_holder {
+	@extend %clearfix;
+	position       : relative;
+	margin         : 0 -1% 0 -20*$m;
+	padding-bottom : 20*$m;
+}
+
+.fav_col {
+	float        : left;
+	width        : 33%;
+	padding-left : 20 *$m;
+}
+
+.fav_switcher_holder {
+	position : relative;
+	
+	&:before {
+		z-index    : 2;
+		content    : '';
+		position   : absolute;
+		top        : 30 *$m;
+		bottom     : 0;
+		left       : 0;
+		width      : 23.4%;
+		background : #fff;
+		box-shadow : 0 2*$m 12*$m rgba(0, 0, 0, .4);
+	}
+	
+	&:after {
+		display    : none;
+		z-index    : 1;
+		content    : '';
+		position   : absolute;
+		top        : 30 *$m;
+		bottom     : 0;
+		left       : 23.4%;
+		width      : 25.6%;
+		background : #f4f5f6;
+		box-shadow : 0 1*$m 7*$m rgba(0, 0, 0, .25);
+	}
+	
+	.cb {
+		
+		&:before {
+			display    : none;
+			z-index    : 1;
+			content    : '';
+			position   : absolute;
+			top        : 30 *$m;
+			bottom     : 0;
+			right      : 0;
+			width      : 51%;
+			background : #e0e0e0;
+		}
+	}
+	
+	&.open_sub_cat {
+		&:after {
+			display : block;
+		}
+	}
+	
+	&.open_cat {
+		.cb {
+			&:before {
+				display : block;
+			}
+		}
+	}
+	
+}
+
+.fav_switcher_col {
+	z-index  : 2;
+	position : relative;
+	float    : left;
+	width    : 51%;
+	
+	&.favCol_1 {
+		width : 23.4%;
+		
+		.chzn_item {
+			&.result-selected,
+			&:hover {
+				background : #f4f5f6;
+			}
+		}
+	}
+	
+	&.favCol_2 {
+		width   : 25.6%;
+		display : none;
+		
+		.open_sub_cat & {
+			display : block;
+		}
+		
+		.chzn_item {
+			&.result-selected,
+			&:hover {
+				background : #e0e0e0;
+			}
+		}
+	}
+}
+
+.favCol_3 {
+	display : none;
+	
+	.open_cat & {
+		display : block;
+	}
+}
+
+.fav_switcher_block {
+	position : relative;
+	
+	.chzn_item {
+		
+		&.result-selected,
+		&:hover {
+			background : darken(#e0e0e0, 5%);
+		}
+	}
+}
+
+.fav_switcher_caption {
+	font-size     : 16 * $m;
+	margin-bottom : 18 * $m;
+	padding-left  : 16*$m;
+	
+	.fav_switcher_col:first-child & {
+		padding-left : 8*$m;
+	}
+}
+
+.fav_box {
+	@extend %box_shadow;
+	margin-bottom : 8*$m;
+	padding       : 0 15*$m;
+}
+
+.fav_controls {
+	clear         : both;
+	margin-bottom : 20*$m;
+	text-align    : center;
+}
+
+.fav_label {
+	position : relative;
+	float    : left;
+	@extend %turquoise_icon_btn;
+	
+	&:before {
+		font-size : 18 *$m;
+	}
+	
+	+ .search_result_text {
+		margin-left : 30 *$m;
+	}
+	
+}
+
+.icon-download_cloud {
+	@extend %turquoise_icon_btn;
+}

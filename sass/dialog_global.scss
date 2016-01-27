@@ -1,0 +1,229 @@
+@include style_separator(test, global, admin) {
+	//---jQuery UI---*/
+	
+	.ui-helper-hidden {
+		display : none;
+	}
+	
+	.ui-helper-hidden-accessible {
+		position   : absolute;
+		z-index    : 5000;
+		left       : 0;
+		visibility : hidden;
+		color      : transparent;
+		opacity    : 0;
+	}
+	
+	//-------------------------------------------------------ui-dialog
+	.ui-dialog {
+		position  : absolute;
+		z-index   : 1000;
+		display   : none;
+		outline   : 0;
+		max-width : 92%;
+		
+		&.dialog_g_wide {
+			max-width : 100%;
+		}
+		
+		&.check_offers {
+			overflow                : hidden;
+			border-radius           : 2 *$m;
+			background              : url(../i/bg_banner_4.jpg) no-repeat 50%;
+			-webkit-background-size : cover;
+			-moz-background-size    : cover;
+			-o-background-size      : cover;
+			background-size         : cover;
+			
+			.ui-dialog-titlebar {
+				background : none;
+				min-height : 45*$m;
+			}
+		}
+		
+		&.out_of_funds {
+			overflow                : hidden;
+			border-radius           : 2 *$m;
+			background              : url(../i/bg_banner_3.jpg) no-repeat 50%;
+			-webkit-background-size : cover;
+			-moz-background-size    : cover;
+			-o-background-size      : cover;
+			background-size         : cover;
+			
+			.ui-dialog-titlebar {
+				background : none;
+				min-height : 45 *$m;
+			}
+		}
+		
+		.no_animation & {
+			display : none !important;
+		}
+	}
+	
+	.dialog_global {
+	}
+	
+	.ui-resizable-handle {
+		display : none !important;
+	}
+	
+	.ui-widget-overlay {
+		position   : fixed;
+		z-index    : 500;
+		top        : 0;
+		left       : 0;
+		width      : 100%;
+		height     : 100%;
+		//	background: #fff;
+		background : transparentize(#000, .8);
+	}
+	
+	.ui-helper-clearfix {
+		display : block;
+		&:after {
+			display    : block;
+			visibility : hidden;
+			clear      : both;
+			height     : 0;
+			content    : '';
+		}
+	}
+	
+	.ui-dialog-titlebar-close {
+		.dialog_close_butt_mod_1 & {
+			@extend %icon-close_remove;
+			position      : absolute;
+			top           : 50%;
+			right         : 12 * $m;
+			width         : 26 *$m;
+			height        : 26 *$m;
+			margin-top    : -13 *$m;
+			border-radius : 100%;
+			background    : none;
+			
+			&:before {
+				@extend %red_btn;
+				@extend %box_shadow;
+				position      : absolute;
+				top           : 0;
+				right         : 0;
+				bottom        : 0;
+				left          : 0;
+				text-align    : center;
+				font-size     : .5em;
+				font-weight   : bold;
+				line-height   : 50 * $m;
+				border-radius : 100%;
+			}
+			
+		}
+		
+		.dialog_close_butt_mod_2 & {
+			@extend %icon-close_remove;
+			position      : absolute;
+			top           : 17 * $m;
+			right         : 6 * $m;
+			width         : 24 *$m;
+			height        : 24 *$m;
+			margin-top    : -12 *$m;
+			border-radius : 100%;
+			background    : none;
+			z-index       : 60;
+			font-size     : 1.4em;
+			
+			&:before {
+				@extend %red_btn;
+				@extend %box_shadow;
+				position      : absolute;
+				top           : 0;
+				right         : 0;
+				bottom        : 0;
+				left          : 0;
+				text-align    : center;
+				font-size     : .5em;
+				font-weight   : bold;
+				line-height   : 46 * $m;
+				border-radius : 100%;
+			}
+			
+		}
+		
+		.no_close_mod & {
+			display : none !important;
+		}
+		
+		.no_title_mod & {
+		}
+	}
+	
+	.ui-dialog-titlebar {
+		.dialog_g_size_1 & {
+			position   : relative;
+			padding    : 15*$m 45*$m 15*$m 20*$m;
+			background : #f4f5f6;
+			
+			.ui-dialog-title {
+				font  : 20 *$m $RobotoMedium;
+				color : #5d5d5d;
+			}
+		}
+		
+		.dialog_g_size_2 & {
+			position      : relative;
+			padding       : 32*$m 45*$m 6*$m 21*$m;
+			background    : #fff;
+			overflow      : hidden;
+			border-radius : 2 *$m 2 *$m 0 0;
+			
+			.ui-dialog-title {
+				font  : 24 *$m $RobotoMedium;
+				color : #5d5d5d;
+			}
+		}
+		
+		.dialog_g_size_3 & {
+			position      : relative;
+			padding       : 24*$m 45*$m 6*$m 20*$m;
+			background    : #fff;
+			overflow      : hidden;
+			border-radius : 2 *$m 2 *$m 0 0;
+			
+			.ui-dialog-title {
+				font  : 20 *$m $RobotoMedium;
+				color : #5d5d5d;
+			}
+		}
+		
+		.ui-draggable & {
+			cursor : pointer;
+		}
+	}
+	
+	.ui-dialog-title {
+		.no_title_mod & {
+			font-size : 0 !important;
+		}
+		
+		.dialog_colorschema_1_mod & {
+			//создать цветовую схему
+		}
+	}
+	
+	.ui-dialog-content {
+		@extend %clearfix;
+		position : relative;
+		
+		.no_title_mod & {
+			border-radius : 6px;
+		}
+		
+		.dialog_g_size_1 & {
+		}
+	}
+	
+	.dialog_g_butt_wrap {
+	}
+	
+	//---------------------------------------------------------------------ui-dialog
+}

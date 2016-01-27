@@ -1,0 +1,150 @@
+-var k=0;
+include mixins
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave genres ', false , false , false , false , false , false , false, true )
+
+	body.account_mod
+		+bottom_player()
+		.wrapper
+			+page_header('Genres', false , false , false , false , false , false , false , false , false, true)
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+
+				div.main_content: .genres_wrapper: .genres_holder.genresHolder
+					.genre_block
+						ul.charts_albums
+							+loop_while(10)
+								li.chart_album_item.genreSwitchBtn.chartAlbumItem
+									.middle_block: a.chart_album_link(href='#'): .chart_name Avant-Garde
+									.middle_block: a.icon-heart_wave.select_all_genres_btn.selectAllGenres(href='#')
+					.genre_block
+						ul.charts_albums.subgenreSwitcher
+							+loop_while(5)
+								li.chart_album_item.chartAlbumItem
+									.chart_album_link.subgenreToggleBtn
+										.fl: .middle_block: .chart_name Jazz &nbsp;
+										.fl: .middle_block: a.icon-heart_wave.select_all_genres_btn.selectAllGenres(href='#')
+										.fr: .middle_block: .style_counter.styleCounter 12
+									.tags_block.tags_v1.subgenreToggleBlock
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text pop 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text multiple 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text ipi 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text chanteur 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text americain 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text pop 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text and 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text chart 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text tell 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text me 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text greatest 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text hits 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text female 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text vocalists 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text dance 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text 80s 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text electronic 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text Madonna 
+								li.chart_album_item.chartAlbumItem
+									.chart_album_link.subgenreToggleBtn
+										.fl: .middle_block: .chart_name Jazz &nbsp;
+										.fl: .middle_block: a.icon-heart_wave.select_all_genres_btn.selectAllGenres(href='#')
+										.fr: .middle_block: .style_counter.styleCounter 12
+									.tags_block.tags_v1.subgenreToggleBlock
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text pop 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text multiple 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text ipi 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text chanteur 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text americain 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text pop 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text and 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text chart 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text tell 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text me 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text greatest 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text hits 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text female 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text vocalists 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text dance 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text 80s 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text electronic 
+										label.check_emul.check_emul_v6
+											input.hidden_check.genreCheck(type='checkbox')
+											span.check_text Madonna 
+									
+				+page_footer()
+			+popups()
+			+dev_btns()
+			+dev_pages()

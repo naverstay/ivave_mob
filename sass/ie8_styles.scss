@@ -1,0 +1,53 @@
+
+.check_emul {
+	
+	&.check_emul_v1,
+	&.check_emul_v2 {
+		
+		.check_text {
+			&:before {
+				display : none;
+			}
+		}
+		
+		.hidden_check {
+			display    : block;
+			position   : absolute;
+			top        : 50%;
+			margin-top : -9 * $m;
+			left       : 0;
+			width      : 18 * $m;
+			height     : 18 * $m;
+		}
+	}
+}
+
+.volume_slider_track,
+.player_queue_block {
+	border : 1 * $m solid #d8d8d8;
+}
+
+.player_queue_block_corner {
+	background    : none;
+	margin-bottom : -32 * $m;
+	margin-left   : 0;
+	
+	&:after,
+	&:before {
+		content      : '';
+		position     : absolute;
+		left         : 0;
+		border-left  : 7 * $m solid transparent;
+		border-right : 7 * $m solid transparent;
+	}
+	
+	&:before {
+		top        : 0;
+		border-top : 7 * $m solid #d8d8d8;
+	}
+	
+	&:after {
+		top        : -2 * $m;
+		border-top : 7 * $m solid #fff;
+	}
+}

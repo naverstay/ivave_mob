@@ -1,0 +1,80 @@
+include mixins
+include mixins_2
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave payments', false, true)
+	
+	body.menu_open_.account_mod
+		+bottom_player()
+		div.wrapper
+			+page_header('Refill balance')
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+				.filter_holder: .filterListScroller
+					ul#payment_list.filter_list.blue_mod.fw_600.text_upper.noSwipe
+						li.filter_item: a.filter_link(href='#payment_tab_1'): span.middle_block Visa/Mastercard 
+						li.filter_item: a.filter_link(href='#payment_tab_2'): span.middle_block Bonus code
+
+				div.main_content: .tabBlock(data-tab-context='#payment_list')
+					#payment_tab_1
+						form(action='#')
+							.content_block.account_mod.half_mod
+								.account_form
+									.f_row.mod_5
+										.account_label: label(for='cardholder_country') Country:
+										.account_input: input#card_number.f_input.f_input_v2(value='Russia')
+									.f_row.mod_5
+										.account_label: label(for='cardholder_city') City:
+										.account_input: input#card_nucardholder_citymber.f_input.f_input_v2(value='Moscow') 
+									.f_row.mod_5
+										.account_label: label(for='cardholder_email') Email:
+										.account_input: input#card_number.f_input.f_input_v2(value='a.peterson@gmail.com')
+									.f_row.mod_5
+										.account_label: label(for='cardholder_name') Name on card:
+										.account_input: input#card_number.f_input.f_input_v2(value='Alexander') 
+								.account_form
+									.f_row.mod_5
+										.account_label: label(for='card_number') Card number:
+										.account_input: input#card_number.f_input.f_input_v2(value='1234 1234 1234 1234') 
+									.f_row.mod_4
+										.account_label: label Expiration Gate
+										.account_input_container
+											.fl.chosen_v1.no_search
+												- var n = 1
+												select.chosen-select(data-scrollbar="true")
+													while n < 32
+														option= n++
+											.fl.chosen_v1.no_search
+												- n = 1920
+												select.chosen-select(data-scrollbar="true")
+													while n < 2010
+														option= n++
+									.f_row.mod_5
+										.account_label
+											.middle_block: label(for='card_cvv') CVV
+											.middle_block: .form_tip_v2: span.fz_10 ?
+										.account_input: input#card_cvv.f_input.f_input_v2(placeholder='***', type='password')
+									.f_row.mod_4
+										.account_label: label Amount
+										.account_input_container
+											.fl: .middle_block.chosen_v1.no_search
+												- var n = 1
+												select.chosen-select(data-scrollbar="true")
+													while n < 32
+														option= n++
+											.fl: .middle_block.fw_b
+												a.btn_v8.bonus_btn(href='#')
+													span and get bonus 
+													span.fz_18  $20
+								.button_holder
+									button.btn_v8.confirm_download_btn: span.middle_block Refill
+
+					#payment_tab_2
+						| bonus tab
+						
+				+page_footer()
+			+popups()
+			+dev_btns()
+			+dev_pages()

@@ -1,0 +1,7 @@
+.ie_gt8 .album_table .icon-player_play.player_btn::before {
+	font-size : .4em;
+}
+
+_:-ms-fullscreen, :root .album_table .icon-player_play.player_btn::before {
+	font-size : .4em;
+}

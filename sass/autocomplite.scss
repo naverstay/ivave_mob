@@ -1,0 +1,100 @@
+.ui-helper-hidden-accessible {
+	display : none;
+}
+
+.ui-helper-hidden-accessible {
+	.autocomplete_v1 & {
+		display    : none;
+		position   : absolute;
+		top        : -55 * $m;
+		right      : -50 * $m;
+		left       : -50 * $m;
+		background : #fff;
+		padding    : 5 * $m;
+		color      : red;
+		font-size  : 30 * $m;
+	}
+}
+
+.ui-autocomplete {
+	
+	.autocomplete_v1 & {
+		position    : relative !important;
+		top         : auto !important;
+		left        : auto !important;
+		right       : auto !important;
+		width       : auto !important;
+//		display     : block !important;
+		background  : $gl_blue;
+		text-align  : left;
+		//		padding     : 9 * $m 0 9 * $m;
+		font-family : $RobotoThin;
+		
+		li.ui-menu-item {
+			cursor      : pointer;
+			color       : #fff;
+			line-height : 56 * $m;
+			padding     : 0 10 * $m 0 30 * $m;
+			@include transition_all(background-color .3s);
+			
+			&.ui-state-focus,
+			&:hover {
+				background : $gl_blue_h;
+			}
+			
+			&:active {
+				background : $gl_blue_a;
+			}
+		}
+	}
+}
+
+.search_result {
+	@extend %clearfix;
+	position     : relative;
+	padding-left : 17 *$m;
+	
+	&:before {
+		content    : '';
+		position   : absolute;
+		left       : 30 * $m;
+		top        : 0;
+		right      : 0;
+		height     : 1 *$m;
+		background : #fff;
+	}
+	
+	&:first-child {
+		&:before {
+			display : none;
+		}
+	}
+	
+	.fl {
+		min-width : 2em;
+	}
+	
+	.player_btn {
+		@include transition_all(transform .6s);
+		font-size : .55em;
+		
+		&:hover {
+			@include transform_translate(10 * $m, 0);
+		}
+	}
+	
+	&.ui-state-focus {
+		.player_btn {
+			@include transform_translate(10 * $m, 0);
+		}
+	}
+}
+
+.search_result_track {
+	font-size : 16 * $m;
+}
+
+.search_result_artist {
+	font-size : 12 * $m;
+	opacity   : .7;
+}

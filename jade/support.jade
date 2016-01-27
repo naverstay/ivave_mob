@@ -1,0 +1,49 @@
+include mixins
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave Support', false, false, false, true)
+
+	body
+		+bottom_player()
+		.wrapper
+			+page_header('Support')
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+				.main_content
+					.content_block.compilation_mod
+						.support_caption Opened
+						ul.support_ticket_list
+							+loop_while(2)
+								li.support_ticket_item
+									.support_ticket_caption
+										.fl: a.middle_block.fz_16.color_black(href='support_ticket.html') #514 Can't download album
+										.fr
+											.middle_block
+												a.icon-speach_cloud.support_ticket_link.color_blue(href='#')
+											.middle_block
+												span.fz_12 03.05
+						.support_controls
+							.fl
+								a.btn_v5.support_new_ticket(href='#')
+									span.middle_block.fz_20 +&nbsp;
+									span.middle_block New Ticket
+											
+						.support_caption Closed
+						ul.support_ticket_list.closed_tickets
+							+loop_while(2)
+								li.support_ticket_item
+									.support_ticket_caption
+										.fl: a.middle_block.fz_16.color_gray(href='support_ticket.html') #514 Can't download album
+										.fr
+											.middle_block
+												a.icon-speach_cloud.support_ticket_link.color_gray_light(href='#')
+											.middle_block 
+												span.fz_12 03.05
+
+				+page_footer()
+			+dev_btns_unreg()
+			+unreg_popups()
+			+popups()
+			+dev_pages()

@@ -1,0 +1,875 @@
+
+.aside_right_menu {
+	position   : fixed;
+	z-index    : 15;
+	top        : 0;
+	right      : 0;
+	bottom     : 0;
+	overflow-y : auto;
+	background : #4c6872;
+	width      : 296 *$m;
+	color      : #fff;
+	@extend %translate3d;
+	@include transition_all(transform .3s);
+	
+	.mob_aside_close & {
+		@include transform_translate(100%, 0);
+	}
+}
+
+.aside_content {
+	position   : relative;
+	min-height : 100%;
+	padding    : 0 22 *$m 20 * $m;
+	
+	&:before {
+		position   : absolute;
+		z-index    : 1;
+		top        : 0;
+		left       : 0;
+		bottom     : 0;
+		width      : 6 * $m;
+		content    : '';
+		box-shadow : inset (-4 *$m) (-6* $m) 6* $m rgba(0, 0, 0, .35);
+	}
+}
+
+.aside_filter_caption {
+	@extend %clearfix;
+	margin-bottom  : 13 * $m;
+	padding-top    : 2 *$m;
+	letter-spacing : .3 * $m;
+	line-height    : 25 *$m;
+	
+	&.mod_1 {
+		padding-top   : 18 *$m;
+		margin-bottom : 20 *$m;
+	}
+	
+}
+
+.select_counter {
+	color         : #adbabe;
+	padding-right : 16 *$m;
+}
+
+.genres_controls {
+	white-space : nowrap;
+}
+
+.aside_filter_block {
+	margin-bottom : -5 *$m;
+	@extend %clearfix;
+	
+	.aside_filter_list {
+		float         : left;
+		width         : 50%;
+		padding-right : 2%;
+	}
+}
+
+.aside_f_item {
+	margin-bottom : 19 * $m;
+}
+
+.aside_section_spacer {
+	position   : relative;
+	background : #385762;
+	height     : 16 *$m;
+	margin     : 0 (-22 *$m);
+	box-shadow : inset 0 2 * $m 3*$m rgba(0, 0, 0, .25);
+}
+
+.country_switcher {
+	line-height : 48 * $m;
+}
+
+.artist_block {
+	@extend %clearfix;
+	margin-bottom : 10*$m;
+}
+
+.album_block {
+	@extend %clearfix;
+	margin-bottom : -20 *$m;
+	
+	.tablet.landscape & {
+		margin-bottom : 20 *$m;
+	}
+}
+
+.album_cover {
+	position : relative;
+	
+	img {
+		display : block;
+		width   : 100%;
+	}
+	
+	.tablet.landscape & {
+		float     : left;
+		max-width : 50%;
+	}
+}
+
+.album_cover_likes {
+	position : absolute;
+	bottom   : 10 * $m;
+	right    : 0;
+	left     : 0;
+}
+
+.soc_likes {
+	text-align : center;
+}
+
+.soc_like_btn {
+	display  : block;
+	position : relative;
+	width    : 44 * $m;
+	height   : 44 * $m;
+	
+	&:before {
+		position  : absolute;
+		top       : 0;
+		bottom    : 0;
+		left      : 0;
+		right     : 0;
+		color     : rgba(255, 255, 255, .8);
+		font-size : 48 *$m;
+		@include transition_all(color .3s);
+	}
+	
+	&:hover {
+		&:before {
+			color : rgba(255, 255, 255, 1);
+		}
+	}
+	
+	.tablet.portrait &,
+	.mobile & {
+		&:before {
+			font-size : 3em;
+		}
+	}
+}
+
+.soc_like_item {
+	display        : inline-block;
+	vertical-align : top;
+	margin         : 0 6 * $m;
+}
+
+.album_info {
+	
+	p {
+		margin-top : 4 * $m;
+	}
+	
+	.tablet.landscape & {
+		float        : left;
+		width        : 50%;
+		padding-left : 2%;
+	}
+	
+}
+
+.album_format {
+	padding : 18 * $m 0 10 * $m;
+	@extend %clearfix;
+	
+	.fl {
+		margin-left : 20 * $m;
+		
+		&:first-child {
+			margin-left : 0;
+		}
+	}
+	
+}
+
+.album_download_block {
+	position : relative;
+	@extend %clearfix;
+	
+	.btn_v1.album_download_btn {
+		margin : 5 * $m 28 * $m 0 0;
+	}
+}
+
+%tags_v1 {
+	display        : inline-block;
+	vertical-align : middle;
+	padding        : 3 * $m 10 * $m;
+	margin         : 0 0 10 *$m 5*$m;
+	border-radius  : 15 * $m;
+	color          : #000;
+	background     : #fff;
+	box-shadow     : 0 1*$m 1*$m rgba(0, 0, 0, .25);
+}
+
+.tags_v1 {
+	.default_link {
+		@extend %tags_v1;
+	}
+}
+
+.block_caption {
+	font-size     : 20 *$m;
+	margin-bottom : 14 *$m;
+}
+
+.track_info_toggle {
+	display    : none;
+	cursor     : pointer;
+	position   : absolute;
+	top        : -.25em;
+	bottom     : 0;
+	left       : 0;
+	right      : 0;
+	font-size  : 2em;
+	text-align : center;
+	color      : #666;
+}
+
+.track_info {
+	color : #757575;
+	
+	.tablet.portrait &,
+	.mobile & {
+		position   : absolute;
+		top        : 50%;
+		margin-top : -20 * $m;
+		right      : 0;
+		width      : 40 * $m;
+		height     : 40 * $m;
+		//		position : relative;
+		
+		span {
+			display : none;
+		}
+	}
+	
+}
+
+.related_block {
+	.block_caption {
+		padding-left : 6 * $m;
+	}
+}
+
+.related_artist,
+.related_year {
+	color : #757575;
+}
+
+.album_title {
+	margin-bottom : 10 *$m;
+	font          : 21 * $m $RobotoMedium;
+}
+
+.track_controls {
+	@include transition_all(margin .3s, transform .3s);
+}
+
+.mobile,
+.portrait {
+	
+	.ui-dialog {
+		position : absolute !important;
+		//		top      : 56 * $m !important;
+		left     : 0 !important;
+		right    : 0 !important;
+		margin   : 0 auto !important;
+	}
+}
+
+.tablet.portrait,
+.mobile {
+	
+	.slide_next,
+	.slide_prev {
+		display : none;
+	}
+	
+	.slide_content {
+		padding-bottom : 70 *$m;
+		
+		.table_cell {
+			vertical-align : bottom;
+		}
+	}
+	
+	.welcome_block {
+		padding : 20*$m 28*$m 25 *$m;
+	}
+	
+	.welcome_title {
+		font-size : 24 *$m;
+	}
+	
+	.btn_v5.newbe_link {
+		color           : #fff;
+		text-decoration : none;
+		text-transform  : uppercase;
+		font            : 15 * $m $RobotoMedium;
+	}
+	
+	.hero_text,
+	.hero_title {
+		display : none;
+	}
+	
+	.main_slider_img {
+		display : none;
+	}
+	
+	.main_slider_mob_img {
+		display : block;
+	}
+	
+	.wide_reg_banner {
+		height        : 210 *$m;
+		padding-top   : 20 *$m;
+		line-height   : 1.5;
+		margin-top    : 14*$m;
+		margin-bottom : 14*$m;
+		text-align    : center;
+		
+		.fl, .fr {
+			float : none;
+			width : 100%;
+			
+			.middle_block {
+				width : 100%;
+			}
+		}
+		
+		.btn_v5.newbe_btn {
+			padding : 0 2em;
+		}
+		
+	}
+	
+	.wide_b_title {
+		font          : 35*$m $RobotoLight;
+		margin-bottom : 10 *$m;
+	}
+	
+	.wide_b_info {
+		margin-bottom : 20 *$m;
+		padding       : 0;
+		text-align    : center;
+		font-size     : 15 *$m;
+		font-family   : $RobotoLight;
+	}
+	
+	.player_q_clear {
+		position : relative;
+		width    : 20* $m;
+		height   : 20* $m;
+		@extend %icon-close_remove;
+		
+		&:before {
+			@extend %red_btn;
+			position      : absolute;
+			top           : -20 * $m;
+			bottom        : -20 * $m;
+			left          : -20 * $m;
+			right         : -20 * $m;
+			color         : #fff;
+			border-radius : 100%;
+			text-align    : center;
+			font-size     : .8em;
+			font-weight   : bold;
+			line-height   : 40 * $m;
+		}
+		
+	}
+	
+	.track_controls {
+		@include transform_translate(100%, 0);
+		background   : #385762;
+		line-height  : 60 * $m;
+		margin-right : -100%;
+		margin-left  : 17 *$m;
+		padding      : 0 13 *$m;
+		
+		.playlist_btn {
+			color : #fff;
+			
+			&:hover {
+				color : #fff;
+			}
+		}
+	}
+	
+	.track_name {
+		font-size : 16 *$m;
+	}
+	
+	.player_btn {
+		text-align : right;
+	}
+	
+	.album_format,
+	.album_download_block,
+	.block_caption {
+		padding-left  : 15 * $m;
+		padding-right : 15 * $m;
+	}
+	
+	.album_download_block {
+		padding-top : 10 *$m;
+		
+		.btn_v1.album_download_btn {
+			margin-right : 0;
+		}
+	}
+	
+	.album_wrapper {
+		padding : 16 *$m 0 10 * $m 14 *$m;
+	}
+	
+	.album_table {
+		
+		.col_2 {
+			.check_emul.check_emul_v2 {
+				left : -14 * $m;
+				
+				.check_text {
+					min-height   : 55 *$m;
+					padding-left : 60 * $m;
+					
+					&:before {
+						left        : -2 *$m;
+						width       : 55 * $m;
+						height      : 50 * $m;
+						margin-top  : -25 * $m;
+						font-size   : 16 * $m;
+						line-height : 50 * $m;
+					}
+					
+					&:after {
+						width         : 60 * $m;
+						height        : 55 * $m;
+						margin-top    : -30 * $m;
+						border-radius : 0;
+						@include transition_all(border-color .5s, background-color .5s);
+					}
+				}
+			}
+		}
+		
+		.open_check {
+			.col_5 {
+				width : 13.5%;
+				//				@include transition_all(width .1s);
+			}
+			
+			.col_2 {
+				margin-left : 0;
+				
+				.check_emul.check_emul_v2 {
+					.check_text:after {
+						@include transition_all(border-color 0s, background-color 0s);
+					}
+				}
+			}
+			
+			.col_4 {
+				width : 50%;
+			}
+			
+		}
+		
+		.album_row {
+			@include transition_all(margin .1s);
+			
+			.track_info_toggle {
+				display : block;
+			}
+			
+			&.open_controls {
+				//				margin-left  : -40%;
+				margin-left  : -30em;
+				margin-right : 0;
+				
+				.track_info {
+					right : auto;
+					left  : 0;
+				}
+				
+				.col_4 {
+					//					width : 33%;
+					width : 15em;
+					//					@include transition_all(width .1s);
+				}
+				
+				.col_5 {
+					//					width : 52%;
+					width : 20em;
+				}
+				
+				.track_controls {
+					@include transform_translate(0, 0);
+					margin-right : 0;
+					margin-left  : 35 * $m;
+				}
+			}
+		}
+	}
+	
+	.mob_hidden {
+		display : none !important;
+	}
+	
+	.player_progress_track {
+		background : none;
+		height     : 20 *$m;
+		bottom     : 14 *$m;
+		right      : 17 *$m;
+		left       : 47 *$m;
+		
+		&:before {
+			content    : '';
+			position   : absolute;
+			top        : 50%;
+			left       : 0;
+			right      : 0;
+			height     : 2 *$m;
+			background : #385762;
+		}
+	}
+	
+	.footer_player_holder {
+		height     : 80 * $m;
+		background : #23b9ff;
+		@include transition_all(transform .3s);
+		//		@include transform_translate(220 * $m, 0);
+		
+		.mob_menu_close & {
+			//			@include transform_translate(0, 0);
+		}
+	}
+	
+	.how_download_mod {
+		
+		.footer_player_holder {
+			height      : 52 * $m;
+			line-height : 50 * $m;
+			
+			+ .wrapper {
+				.base {
+					@include transition_all(padding .3s);
+					padding-bottom : 52 * $m;
+				}
+			}
+		}
+	}
+	
+	&.mob_menu_close {
+		.footer_player_holder {
+			@include transform_translate(0, 0);
+		}
+	}
+	
+	.player_progress {
+		background    : #fff;
+		height        : 2 *$m;
+		bottom        : 50%;
+		margin-bottom : -2 *$m;
+	}
+	
+	.player_progress_len,
+	.player_progress_pos {
+		position    : absolute;
+		top         : 100%;
+		color       : #fff;
+		font-size   : 12 *$m;
+		margin-top  : -4 * $m;
+		line-height : 1;
+	}
+	
+	.player_progress_pos {
+		left : 0;
+	}
+	
+	.player_progress_len {
+		right : 0;
+	}
+	
+	.player_progress_pin {
+		cursor        : pointer;
+		position      : absolute;
+		left          : 75%;
+		top           : 50%;
+		width         : 20 *$m;
+		height        : 20 *$m;
+		margin        : -10 *$m 0 0 (-10 *$m);
+		background    : #fff;
+		border-radius : 100%;
+		box-shadow    : 0 3 * $m 5 *$m rgba(0, 0, 0, .35);
+	}
+	
+	.player_controls {
+		//		position      : absolute;
+		line-height   : 2em;
+		//		top           : 0;
+		//		left          : 0;
+		//		right         : 0;
+		padding-right : 7 *$m;
+		text-align    : right;
+		
+		> .middle_block {
+			margin-left : 1em;
+			
+			> .player_btn {
+				
+				&:before {
+					color       : #fff;
+					text-shadow : none;
+				}
+			}
+		}
+		
+		.volume_mob_block {
+			
+			.player_btn {
+				&:before {
+					color       : #fff;
+					text-shadow : none;
+				}
+				
+				&:active,
+				&:hover {
+					&:before {
+						color : #fff;
+					}
+				}
+			}
+			
+			&.hovered,
+			&.btn_hovered {
+				.player_btn {
+					&:before {
+						//						color : #25b9ff;
+					}
+				}
+			}
+		}
+		
+		.play_mob_block {
+			position   : absolute;
+			bottom     : 15 *$m;
+			left       : -10 *$m;
+			margin-top : 10 *$m;
+			
+			.icon-player_play {
+				&:before {
+					font-size : 14 *$m;
+				}
+			}
+		}
+	}
+	
+	.player_queue_block {
+		min-width     : 0;
+		right         : 0;
+		left          : 0;
+		margin-bottom : 0;
+		padding       : 0 10 *$m;
+		
+		.player_q_item {
+			padding-right : 10 *$m;
+			
+			> .fl > .middle_block {
+				max-width : 10em;
+			}
+		}
+		
+		.album_table {
+			.col_2 {
+				.check_emul.check_emul_v2 {
+					left : 0;
+				}
+			}
+			
+		}
+	}
+	
+	.volume_mob_block {
+		//		position : absolute;
+		//		top      : 0;
+		//		right    : 0;
+	}
+	
+	.playlist_mob_block {
+		//		position : absolute;
+		//		top      : 0;
+		//		right    : 50 *$m;
+		
+		.player_list {
+			&:before {
+				font-size : 20 *$m;
+			}
+		}
+	}
+	
+	.player_control_panel {
+		@extend %clearfix;
+		position : absolute;
+		top      : 12 *$m;
+		left     : 0;
+		right    : 55 *$m;
+		
+		.player_mob_composition {
+			float         : left;
+			max-width     : 70%;
+			white-space   : nowrap;
+			overflow      : hidden;
+			text-overflow : ellipsis;
+		}
+		
+		.player_mob_download {
+			float : right;
+		}
+		
+		.download_block {
+			line-height : 1;
+			font-size   : 1em;
+			box-shadow  : none;
+		}
+		
+		.download_share {
+			width      : auto;
+			background : none;
+		}
+		
+		.download_price {
+			min-width  : 0;
+			background : none;
+			
+			&:before {
+				font-size : 20 *$m;
+			}
+		}
+	}
+	
+	.composition_author {
+		//		position : absolute;
+		color         : #fff;
+		max-width     : 100%;
+		overflow      : hidden;
+		white-space   : nowrap;
+		text-overflow : ellipsis;
+		
+		p {
+			display : inline;
+		}
+	}
+	
+	&.player_hidden {
+		
+		.footer_player_holder {
+			@include transform_translate(0, 100%);
+			
+			+ .wrapper .base {
+				padding-bottom : 0;
+			}
+		}
+	}
+}
+
+.tablet.landscape {
+	
+	.content_block.half_mod {
+		@extend %clearfix;
+		margin-left : -20 *$m;
+		
+		.account_form {
+			padding-left : 20*$m;
+			width        : 50%;
+			float        : left;
+			
+			.f_row.mod_5,
+			.f_row.mod_4 {
+				margin-left : 0;
+			}
+		}
+		
+		.button_holder {
+			padding-left : 20*$m;
+		}
+	}
+	
+	.track_controls_holder {
+		width : 18em;
+	}
+	
+	.track_controls {
+		@include transform_translate(0, 0);
+		margin-right : 0;
+	}
+	
+	.welcome_subtitle {
+		font-size : 18 *$m;
+	}
+	
+	.btn_v5 {
+		&.newbe_link {
+			@extend %box_shadow;
+			@extend %blue_btn_v4;
+			display         : inline-block;
+			vertical-align  : top;
+			padding         : 0 1em;
+			cursor          : pointer;
+			text-align      : center;
+			font            : 18 *$m $RobotoBold;
+			line-height     : 2.5;
+			border-radius   : 2 *$m;
+			margin-bottom   : 16 *$m;
+			text-decoration : none;
+		}
+	}
+	
+	.mob_only {
+		display : none;
+	}
+	
+	.footer_player_holder {
+		@include transition_all(transform .3s);
+		//		@include transform_translate(220 * $m, 0);
+	}
+	
+	&.mob_menu_close {
+		.footer_player_holder {
+			//			@include transform_translate(0, 0);
+		}
+	}
+	
+	.footer_player_holder {
+		
+		+ .wrapper {
+			.base {
+				padding-bottom : 94 * $m;
+			}
+		}
+	}
+}
+
+.desktop_warning {
+	@extend %hor_vert_centr;
+	z-index    : 100;
+	position   : fixed;
+	max-width  : 90%;
+	background : #fff;
+	border     : 3 *$m solid $color_blue_g;
+	font-size  : 50 *$m;
+	padding    : 5 * $m;
+	
+	.mobile &,
+	.tablet & {
+		display : none;
+	}
+}

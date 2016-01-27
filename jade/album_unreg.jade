@@ -1,0 +1,141 @@
+include mixins
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave альбом для незаегистрированных')
+
+	body.menu_open_
+		+bottom_player()
+		div.wrapper
+			//.rect_1024
+			+page_header(false, false, false, false, false, false, true)
+			.base
+				+unreg_banner()
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+				div.main_content
+					.album_block
+						.album_cover
+							.album_cover_likes
+								ul.soc_likes
+									li.soc_like_item: a.soc_like_btn.icon-soc_fb(href='#')
+									li.soc_like_item: a.soc_like_btn.icon-soc_tw(href='#')
+									li.soc_like_item: a.soc_like_btn.icon-soc_vk(href='#')
+									li.soc_like_item: a.soc_like_btn.icon-soc_gl(href='#')
+							img(src='i/big_cover.jpg')
+						.album_info
+							.aside_caption_holder
+								.fr: a.favorite_author.icon-heart_filled(href='#')
+								.aside_caption.fw_600 Alejandro
+								p.fz_18
+									| by 
+									a.default_link(href='#') Lady Gaga
+
+							.album_format
+								.fl: label.check_emul.check_emul_v4
+									input.hidden_check(type='radio', name='title_filter')
+									span.check_text.fw_600.fz_16 MP3
+								.fl: label.check_emul.check_emul_v4
+									input.hidden_check(type='radio', name='title_filter')
+									span.check_text.fw_600.fz_16 FLAC
+
+							.album_download_block
+								.fr
+									button.btn_v1.album_download_btn.albumDownloadBtn
+										span.download_share -70%
+										span.download_text.icon-download(href='#') $ 1.30
+								dl.album_info_list
+									dt Released: 
+									dd 2013 <br>
+									dt Size: 
+									dd 128 Mb<br>
+									dt Bitrate: 
+									dd MP3 320 kbit<br>
+									dt Release ty
+									dd pe: Concert <br> <br>
+									dt.mob_hidden: .middle_block Genres: 
+									dd.mob_hidden.tags_v1
+										a.default_link(href='#') Electronic, 
+										a.default_link(href='#') Pop/Rock 
+										a.default_link(href='#') R&B
+									| <br>
+									dt.mob_hidden: .middle_block Styles:
+									dd.mob_hidden.tags_v1
+										a.default_link(href='#') AM Pop, 
+										a.default_link(href='#') Club/Dance, 
+										a.default_link(href='#') Dance, 
+										a.default_link(href='#') Dance-Pop, 
+										a.default_link(href='#') Hip-Hop/Urban 
+										a.default_link(href='#') R&B/Soul
+
+					.block_caption.fw_600.mob_hidden Tracks
+					.albums_container
+						div.album_wrapper
+							.album_title.mob_only CD1. The Fame
+							+album_table()
+							.album_list_controls
+								.middle_block: .download_block
+									.download_share -70%
+									a.download_price.icon-download(href='#') Selected $0.40
+								.middle_block
+									span.download_size.fz_16 32.67 Mb
+
+					.related_block
+						.block_caption.fw_600 Related albums:
+
+						.album_wrapper
+							.related_list.swiper-container.noSwipe: .swiper-wrapper
+								+loop_while(10)
+									.related_item.swiper-slide
+										a.related_album_cover(href='#')
+											img(src='i/related_album.jpg')
+											.related_price.fz_17.fw_600 $ 1.10
+										p.related_year 2015
+										p A State Of Trance
+										p.related_artist Armin Van Buuren
+									.related_item.swiper-slide
+										a.related_album_cover(href='#')
+											img(src='i/related_album.jpg')
+											.related_price.fz_17.fw_600 $ 1.20
+										p.related_year 2015
+										p A State Of Trance
+										p.related_artist Armin Van Buuren
+									.related_item.swiper-slide
+										a.related_album_cover(href='#')
+											img(src='i/related_album.jpg')
+											.related_price.fz_17.fw_600 $ 1.30
+										p.related_year 2015
+										p A State Of Trance
+										p.related_artist Armin Van Buuren
+
+						.block_caption.fw_600 More Lady Gaga’s albums
+
+						.album_wrapper
+							.related_list.swiper-container.noSwipe: .swiper-wrapper
+								+loop_while(20)
+									.related_item.swiper-slide
+										a.related_album_cover(href='#')
+											img(src='i/related_album.jpg')
+											.related_price.fz_17.fw_600 $ 1.10
+										p.related_year 2015
+										p A State Of Trance
+										p.related_artist Armin Van Buuren
+									.related_item.swiper-slide
+										a.related_album_cover(href='#')
+											img(src='i/related_album.jpg')
+											.related_price.fz_17.fw_600 $ 1.20
+										p.related_year 2015
+										p A State Of Trance
+										p.related_artist Armin Van Buuren
+									.related_item.swiper-slide
+										a.related_album_cover(href='#')
+											img(src='i/related_album.jpg')
+											.related_price.fz_17.fw_600 $ 1.30
+										p.related_year 2015
+										p A State Of Trance
+										p.related_artist Armin Van Buuren
+
+				+page_footer()
+
+			+popups()
+			+dev_btns()
+			+dev_pages()

@@ -1,0 +1,88 @@
+-var k=0;
+include mixins
+include mixins_3
+doctype html
+html.mob_menu_close.mob_aside_close.mobile_.tablet_(lang='ru')
+	+dev_head('ivave Playlists ', false, false, false, false, true)
+	body
+		+bottom_player()
+		.wrapper
+			+page_header('Playlists')
+			.base
+				.global_left_track.globalLeftTrack
+				.global_right_track.globalRightTrack
+				div.main_content
+					.content_block.compilation_mod
+						div.album_wrapper.albumWrapper
+							.playlist_control_row.playlistControlRow
+								.fl: .middle_block
+									.editableBlock.fz_18 For Run
+								.fr.track_controls_holder
+									.middle_block: a.btn_v4.table_collapse_btn.minus_mod.playlistCollapseBtn(href='#')
+									.middle_block: .track_controls.playlist_btn_gray
+										a.playlist_btn.icon-delete(href='#')
+										a.playlist_btn.icon-download(href='#')
+										a.playlist_btn.icon-pencil.renameBtn(href='#')
+							.playlist_row.playlistRow
+								+album_table(true)
+								.album_list_controls.clearfix
+									.fl: .middle_block: .download_block
+										a.download_price.icon-download(href='#') Selected $0.40
+									.fr: .middle_block
+										span.download_size.fz_16 32.67 Mb
+						div.album_wrapper.albumWrapper
+							.playlist_control_row.playlistControlRow
+								.fl: .middle_block
+									.editableBlock.fz_18 For Run
+								.fr.track_controls_holder
+									.middle_block: a.btn_v4.table_collapse_btn.minus_mod.playlistCollapseBtn(href='#')
+									.middle_block: .track_controls.playlist_btn_gray
+										a.playlist_btn.icon-delete(href='#')
+										a.playlist_btn.icon-download(href='#')
+										a.playlist_btn.icon-pencil.renameBtn(href='#')
+							.playlist_row.playlistRow
+								+album_table(true)
+								.album_list_controls.clearfix
+									.fl: .middle_block: .download_block
+										a.download_price.icon-download(href='#') Selected $0.40
+									.fr: .middle_block
+										span.download_size.fz_16 32.67 Mb
+						div.album_wrapper.albumWrapper
+							.playlist_control_row.playlistControlRow
+								.fl: .middle_block
+									.editableBlock.fz_18 For Run
+								.fr.track_controls_holder
+									.middle_block: a.btn_v4.table_collapse_btn.minus_mod.playlistCollapseBtn(href='#')
+									.middle_block: .track_controls.playlist_btn_gray
+										a.playlist_btn.icon-delete(href='#')
+										a.playlist_btn.icon-download(href='#')
+										a.playlist_btn.icon-pencil.renameBtn(href='#')
+							.playlist_row.playlistRow
+								+album_table(true)
+								.album_list_controls.clearfix
+									.fl: .middle_block: .download_block
+										a.download_price.icon-download(href='#') Selected $0.40
+									.fr: .middle_block
+										span.download_size.fz_16 32.67 Mb
+						div.album_wrapper.albumWrapper
+							.playlist_control_row.playlistControlRow
+								.fl: .middle_block
+									.editableBlock.fz_18 For Run
+								.fr.track_controls_holder
+									.middle_block: a.btn_v4.table_collapse_btn.minus_mod.playlistCollapseBtn(href='#')
+									.middle_block: .track_controls.playlist_btn_gray
+										a.playlist_btn.icon-delete(href='#')
+										a.playlist_btn.icon-download(href='#')
+										a.playlist_btn.icon-pencil.renameBtn(href='#')
+							.playlist_row.playlistRow
+								+album_table(true)
+								.album_list_controls.clearfix
+									.fl: .middle_block: .download_block
+										a.download_price.icon-download(href='#') Selected $0.40
+									.fr: .middle_block
+										span.download_size.fz_16 32.67 Mb
+
+				+page_footer()
+			+popups()
+			+dev_btns()
+			+dev_pages()

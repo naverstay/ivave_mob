@@ -1,0 +1,233 @@
+.search_tab_block {
+	height      : 60 * $m;
+	line-height : 30 * $m;
+	background  : $gl_blue;
+	padding     : 25*$m 30 * $m 0;
+}
+
+.column_wrapper {
+	@extend %clearfix;
+	
+	&.search_result_mod {
+		padding-top : 42 *$m;
+		margin-left : -28 *$m;
+		
+		.column_unit {
+			width         : 33%;
+			padding-left  : 28 *$m;
+			margin-bottom : 40 *$m;
+		}
+	}
+	
+	&.chart_mod {
+		padding-top  : 20*$m;
+		margin-left  : -28 *$m;
+		margin-right : -1%;
+		
+		.column_unit {
+			width         : 33%;
+			padding-left  : 28 *$m;
+			margin-bottom : 12 *$m;
+		}
+	}
+}
+
+.column_unit {
+	float : left;
+}
+
+.search_result_caption {
+	font-size      : 22 *$m;
+	margin-bottom  : 10 *$m;
+	letter-spacing : -.02em;
+	color          : #252525;
+}
+
+.search_result_unit {
+	@extend %clearfix;
+	min-height : 70 *$m;
+	padding    : 14 *$m 0 10 *$m;
+	border-top : 1 *$m solid #f1f2f4;
+	
+	&:first-child {
+		border-top-color : transparent;
+	}
+	
+	.fav_col & {
+		@extend %box_shadow;
+		border-top    : none;
+		padding-left  : 15 *$m;
+		margin-bottom : 8*$m;
+		min-height    : 0;
+	}
+	
+	.fl {
+		width : 80%;
+	}
+	
+	.fr {
+		width : 20%;
+	}
+	
+}
+
+.search_result_text {
+	
+	.search_r_cover + & {
+		margin-left : 54 *$m;
+	}
+	
+}
+
+.search_r_cover {
+	float       : left;
+	width       : 40 *$m;
+	height      : 40 *$m;
+	line-height : 40 *$m;
+	text-align  : center;
+	
+	img {
+		display : block;
+		width   : 100%;
+		height  : 100%;
+	}
+	
+	.player_btn.icon-player_play {
+		
+		&:before {
+			font-size : 24 *$m;
+		}
+	}
+}
+
+a.search_r_cover {
+	text-decoration : none;
+	
+	&:empty {
+		background : #bbccd4;
+	}
+}
+
+.search_result_text {
+	color : #009e7f;
+	@include transition_all(transform .3s);
+	
+	em {
+		font-style : normal;
+		background : #ffeb11;
+	}
+	
+	p {
+		margin-top : 5 *$m;
+		
+		&:first-child {
+			margin-top : 0;
+		}
+	}
+}
+
+.one_line_mod {
+	white-space   : nowrap;
+	max-width     : 100%;
+	overflow      : hidden;
+	text-overflow : ellipsis;
+}
+
+.search_result_tabs {
+	@extend %clearfix;
+}
+
+.search_result_list {
+	@extend %clearfix;
+	margin  : 0 -1% 0 -7*$m;
+	padding : 0 7 *$m;
+}
+
+.search_result_item {
+	float         : left;
+	max-width     : 33%;
+	padding-left  : 7*$m;
+	margin-bottom : 15*$m;
+	
+	.related_price {
+		font-size : 12 *$m;
+	}
+}
+
+.top_100_pos {
+	position    : absolute;
+	bottom      : 0;
+	left        : 0;
+	padding     : 0 3 *$m;
+	min-width   : 27 * $m;
+	line-height : 22.5 *$m;
+	text-align  : center;
+	background  : rgba(0, 0, 0, .2);
+	
+	span {
+		color     : #fff;
+		font-size : 12 *$m;
+	}
+}
+
+.result_item_inner {
+	@extend %box_shadow;
+	position      : relative;
+	overflow      : hidden;
+	border-radius : 0 0 3*$m 3*$m;
+	
+	&.icon-heart_filled {
+		&:before {
+			position  : absolute;
+			top       : 14 *$m;
+			left      : 14 *$m;
+			font-size : 0.64286em;
+			color     : #ff3f68;
+		}
+	}
+	
+	.default_link {
+		color : #000;
+	}
+}
+
+.search_result_info {
+	position   : relative;
+	min-height : 48 *$m;
+	
+	.tablet & {
+		padding : 0 5 *$m;
+	}
+	
+	&.icon-heart_filled {
+		&:before {
+			position  : absolute;
+			bottom    : 5 *$m;
+			left      : 5 *$m;
+			font-size : 0.64286em;
+			color     : #ff3f68;
+		}
+	}
+}
+
+.search_result_link {
+	display         : block;
+	padding         : 0 25 *$m;
+	color           : #c7edff;
+	font-family     : $RobotoMedium;
+	border-bottom   : 5*$m solid transparent;
+	text-decoration : none;
+	@include transition_all(color .3s, border-color .3s);
+	
+	&:hover {
+		border-color : darken(#23b9ff, 20%);
+	}
+	
+	.ui-state-active & {
+		cursor       : default;
+		border-color : #ffeb11;
+	}
+}
+
+
+
